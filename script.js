@@ -18,34 +18,19 @@ window.addEventListener('scroll', () => {
   const y = window.pageYOffset;
   bg.style.transform = `translateY(${y * 0.05}px)`;
 
-  // Floating logo parallax
-  document.querySelectorAll('.floating-logo').forEach((logo, index) => {
-    const speed = 0.04 + index * 0.01;
-    logo.style.transform = `translateY(${y * speed}px)`;
+  // Apple-style card transitions
+  document.querySelectorAll('.scroll-card').forEach((card) => {
+    const rect = card.getBoundingClientRect();
+    const progress = Math.min(Math.max(1 - rect.top / window.innerHeight, 0), 1);
+
+    const icon = card.querySelector('.scroll-icon');
+
+    card.style.transform = `translateY(${progress * -12}px) scale(${1 - progress * 0.015})`;
+    card.style.opacity = `${0.78 + progress * 0.22}`;
+
+    if (icon) {
+      icon.style.transform = `translateY(${progress * -18}px) rotate(${progress * -4}deg)`;
+      icon.style.opacity = `${0.7 + progress * 0.3}`;
+    }
   });
 });
-
-// Subtle card tilt (desktop only)
-if (window.innerWidth > 768) {
-  document.querySelectorAll('.glass-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const rotateX = ((y / rect.height) - 0.5) * -5;
-      const rotateY = ((x / rect.width) - 0.5) * 5;
-
-      card.style.transform = `
-        perspective(1000px)
-        rotateX(${rotateX}deg)
-        rotateY(${rotateY}deg)
-        translateY(-6px)
-      `;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
-}
