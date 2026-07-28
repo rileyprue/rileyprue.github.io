@@ -1,11 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riley Prue</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <h1>Hello!</h1>
-    <p>Welcome to my website.</p>
+
+  <div class="bg-gradient"></div>
+
+  <nav class="nav">
+    <div class="logo">prue.cc</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#future">Future</a>
+    </div>
+  </nav>
+
+  <section class="panel hero reveal">
+    <div class="hero-content">
+      <p class="eyebrow">Riley Prue</p>
+      <h1>Building a career in technology, fire protection, and electrical systems.</h1>
+      <p class="sub">
+        From fire alarm panels and electrical troubleshooting to networking,
+        HAM radio, and clean technical design.
+      </p>
+      <div class="scroll-indicator">Scroll to explore ↓</div>
+    </div>
+  </section>
+
+  <section id="about" class="panel split reveal">
+    <div class="sticky-card">
+      <span class="section-number">01</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="content-card">
+      <p>
+        I’m a Grade 11 student pursuing a future in the electrical and fire
+        protection industry. I enjoy working with technology, troubleshooting
+        systems, organizing projects, and building things that are both reliable
+        and visually clean.
+      </p>
+      <p>
+        I’m currently gaining experience in the fire alarm industry while working
+        toward my CFAA training and exploring the electrical apprenticeship path.
+      </p>
+    </div>
+  </section>
+
+  <section id="work" class="panel reveal">
+    <div class="center-intro">
+      <span class="section-number">02</span>
+      <h2>What I’m Working On</h2>
+      <p>Hands-on experience that connects technical skills with real-world systems.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <h3>Fire Alarm Systems</h3>
+        <p>
+          Assisting with troubleshooting, device replacement, wiring verification,
+          panel support, and learning how commercial fire protection systems operate.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Electrical Path</h3>
+        <p>
+          Developing practical electrical knowledge, safe work habits, tool handling,
+          and an understanding of how building systems are installed and maintained.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">📡</div>
+        <h3>Tech & Networking</h3>
+        <p>
+          Building experience with domains, DNS, Microsoft 365, GitHub Pages,
+          networking concepts, and personal technical projects.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="future" class="panel split reverse reveal">
+    <div class="sticky-card">
+      <span class="section-number">03</span>
+      <h2>What I’m Pursuing</h2>
+    </div>
+    <div class="content-card timeline">
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div>
+          <h3>CFAA Training</h3>
+          <p>Continue progressing toward certification and deeper fire alarm knowledge.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div>
+          <h3>Electrical Apprenticeship</h3>
+          <p>Move into a licensed electrical career with strong field experience.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div>
+          <h3>Long-Term Goal</h3>
+          <p>Build a stable, successful future in the trades while continuing to grow technically and personally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel final reveal">
+    <div class="final-card">
+      <p class="eyebrow">Thanks for visiting</p>
+      <h2>Always learning. Always building.</h2>
+      <p>
+        Technology, fire protection, electrical systems, and the mindset to keep improving every day.
+      </p>
+      <a class="button" href="mailto:riley@prue.cc">Get in Touch</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
