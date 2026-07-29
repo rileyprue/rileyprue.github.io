@@ -1,3 +1,172 @@
+```css
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(34,197,94,0.12),
+      transparent 35%
+    ),
+    #05070d;
+
+  color: #f5f5f7;
+
+  overflow-x: hidden;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.04em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  animation: heroZoom 15s ease forwards;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.85)
+    );
+}
+
+.hero-terminal,
+.terminal {
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  color: #22c55e;
+
+  font-size: 0.95rem;
+}
+
+.hero h1 {
+  margin: 1rem 0;
+
+  font-size:
+    clamp(4rem, 10vw, 8rem);
+
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  color: #d1fae5;
+
+  font-size: 1.2rem;
+}
+
+.hero-button {
+  margin-top: 2rem;
+
+  padding:
+    14px 30px;
+
+  border-radius: 50px;
+
+  background: #22c55e;
+
+  color: #041006;
+
+  font-weight: 700;
+
+  transition: .3s;
+
+  box-shadow:
+    0 12px 30px rgba(34,197,94,.25);
+}
+
+.hero-button:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(34,197,94,.35);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding:
+    120px 25px;
+
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 3.5rem;
+}
+
+.about-text {
+  max-width: 850px;
+
+  margin:
+    25px auto;
+
+  color: #cbd5e1;
+
+  line-height: 1.8;
+
+  font-size: 1.08rem;
+}
+
+
 /* =========================
    APPLE-STYLE FLOATING SKILLS
 ========================= */
@@ -47,7 +216,6 @@
   animation: floatSkill 6s ease-in-out infinite;
 }
 
-/* Natural floating effect */
 .skills-bubbles span:nth-child(2n) {
   animation-delay: .8s;
 }
@@ -61,7 +229,7 @@
 }
 
 .skills-bubbles span:hover {
-  transform: translateY(-6px) scale(1.04);
+  transform: translateY(-6px) scale(1.05);
 
   background: rgba(34,197,94,.16);
 
@@ -70,6 +238,304 @@
   box-shadow:
     0 16px 40px rgba(34,197,94,.22),
     0 8px 18px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.timeline {
+  padding:
+    90px 25px;
+}
+
+.timeline h2 {
+  font-size: 3.5rem;
+}
+
+.timeline-item {
+  border-left:
+    2px solid
+    rgba(34,197,94,.35);
+
+  padding-left: 35px;
+
+  margin:
+    50px 0;
+
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -8px;
+  top: 5px;
+
+  width: 14px;
+  height: 14px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 20px rgba(34,197,94,.5);
+}
+
+.timeline-item span {
+  color: #86efac;
+}
+
+.timeline-item h3 {
+  font-size: 1.7rem;
+
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  color: #cbd5e1;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  padding:
+    90px 25px;
+}
+
+.gallery h2 {
+  text-align: center;
+
+  font-size: 3.5rem;
+
+  margin-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+  gap: 25px;
+}
+
+.gallery-card {
+  height: 420px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  transition:
+    transform .4s ease,
+    border-color .4s ease;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: .5s;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,.82)
+    );
+}
+
+.gallery-overlay h3 {
+  font-size: 1.6rem;
+
+  color: white;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(255,255,255,.16);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =========================
+   FUTURE
+========================= */
+
+.future {
+  padding:
+    100px 25px;
+}
+
+.future h2 {
+  text-align: center;
+
+  font-size: 3.5rem;
+}
+
+.future-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+  gap: 25px;
+
+  margin-top: 50px;
+}
+
+.future-card {
+  padding: 35px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  backdrop-filter: blur(15px);
+
+  transition: .35s;
+}
+
+.future-card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(34,197,94,.5);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.25);
+}
+
+.future-card p {
+  color: #cbd5e1;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding:
+    100px 25px 40px;
+
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 3rem;
+}
+
+.footer p {
+  color: #cbd5e1;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.7;
+}
+
+.footer-links {
+  margin-top: 35px;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #86efac;
+
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: 50px;
+
+  font-size: .9rem;
+
+  color: #94a3b8;
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(50px);
+
+  transition:
+    1s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroZoom {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.12);
+  }
 }
 
 @keyframes floatSkill {
@@ -86,18 +552,36 @@
 
 
 /* =========================
-   MOBILE ABOUT BUBBLES
+   MOBILE
 ========================= */
 
 @media(max-width:700px){
 
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .about h2,
+  .timeline h2,
+  .gallery h2,
+  .future h2 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-card {
+    height: 320px;
+  }
+
   .skills-bubbles {
     gap: 10px;
+
     margin-top: 30px;
   }
 
   .skills-bubbles span {
     padding: 8px 13px;
+
     font-size: .76rem;
   }
 }
+```
