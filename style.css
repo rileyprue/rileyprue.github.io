@@ -141,23 +141,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.hero {
-  position: relative;
-
-  width: 100vw;          /* full viewport width */
-  margin-left: calc(50% - 50vw);
-
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  padding: 120px 20px 100px;
-
-  overflow: hidden;
-}
 
 /* --------------------
    SCROLL PROGRESS
