@@ -121,64 +121,7 @@ e.clientY + "px";
 ========================= */
 
 
-const typingElements =
-document.querySelectorAll(".typing");
 
-
-const typingObserver =
-new IntersectionObserver((entries)=>{
-
-
-entries.forEach(entry=>{
-
-
-if(entry.isIntersecting){
-
-
-const element =
-entry.target;
-
-
-const text =
-element.textContent;
-
-
-element.textContent="";
-
-
-let i=0;
-
-
-function type(){
-
-if(i < text.length){
-
-element.textContent += text[i];
-
-i++;
-
-setTimeout(type,60);
-
-}
-
-}
-
-
-type();
-
-
-typingObserver.unobserve(element);
-
-
-}
-
-
-});
-
-
-},{
-threshold:.8
-});
 
 
 
