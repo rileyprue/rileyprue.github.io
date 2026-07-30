@@ -334,6 +334,7 @@ h2 {
 
 .about {
   max-width: 960px;
+  margin: 0 auto;
 }
 
 .about-text {
