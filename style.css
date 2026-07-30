@@ -314,21 +314,63 @@ h2 {
 /* --------------------
    ABOUT
 -------------------- */
+/* --------------------
+   ABOUT
+-------------------- */
 
 .about {
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;   /* center everything */
 }
 
+/* whoami bubble */
+.about .terminal {
+  margin-bottom: 6px;  /* less space below whoami */
+}
+
+/* About Me heading */
+.about h2 {
+  margin-bottom: 34px;  /* slightly more space below heading */
+}
+
+/* paragraphs */
 .about-text {
   font-size: 1.06rem;
   color: var(--muted);
 
-  margin-bottom: 22px;
+  max-width: 860px;
+  margin: 0 auto 22px;  /* centers each paragraph */
 }
 
 .about-text strong {
   color: var(--text);
+}
+
+/* skill bubbles centered */
+.skills-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* center the bubbles */
+  gap: 12px;
+
+  margin-top: 36px;
+}
+
+.skills-bubbles span {
+  background: var(--surface-solid);
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  padding: 10px 16px;
+
+  font-size: 0.92rem;
+  font-weight: 500;
+
+  color: var(--text);
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 /* --------------------
