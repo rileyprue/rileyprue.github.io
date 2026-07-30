@@ -211,19 +211,34 @@ section {
   width: 48px;
   height: 48px;
 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
 
   background: var(--surface-solid);
   border: 1px solid var(--border);
 
-  color: var(--text);
+  color: #0a66c2; /* LinkedIn blue */
 
   box-shadow: var(--shadow);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .linkedin-bubble:hover {
   transform: translateY(-2px);
-  color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  background: #f8fafc;
+}
+
+.linkedin-bubble svg {
+  width: 22px;
+  height: 22px;
 }
 
 /* --------------------
