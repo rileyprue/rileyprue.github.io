@@ -1,4 +1,3 @@
-```css
 /* =========================
    GLOBAL
 ========================= */
@@ -240,7 +239,6 @@ a {
     0 8px 18px rgba(0,0,0,.25);
 }
 
-
 /* =========================
    EXPERIENCE
 ========================= */
@@ -304,41 +302,148 @@ a {
 
 
 /* =========================
+   EXPERIENCE COLLABORATION BUBBLES
+========================= */
+
+.experience-bubbles {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  max-width: 900px;
+
+}
+
+.experience-bubbles span {
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.07);
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  color:
+    #f8fafc;
+
+  font-size:
+    .85rem;
+
+  font-weight:
+    600;
+
+  backdrop-filter:
+    blur(15px);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+
+  transition:
+    .35s ease;
+
+  animation:
+    floatSkill 6s ease-in-out infinite;
+
+}
+
+
+.experience-bubbles span:nth-child(2n) {
+
+  animation-delay:
+    .8s;
+
+}
+
+
+.experience-bubbles span:nth-child(3n) {
+
+  animation-delay:
+    1.6s;
+
+}
+
+
+.experience-bubbles span:hover {
+
+  transform:
+    translateY(-6px)
+    scale(1.05);
+
+  background:
+    rgba(34,197,94,.15);
+
+  border-color:
+    rgba(34,197,94,.5);
+
+}
+
+
+/* =========================
    GALLERY
 ========================= */
 
 .gallery {
+
   padding:
     90px 25px;
+
 }
+
 
 .gallery h2 {
-  text-align: center;
 
-  font-size: 3.5rem;
+  text-align:
+    center;
 
-  margin-bottom: 50px;
+  font-size:
+    3.5rem;
+
+  margin-bottom:
+    50px;
+
 }
 
+
 .gallery-grid {
-  display: grid;
+
+  display:
+    grid;
 
   grid-template-columns:
     repeat(auto-fit,minmax(280px,1fr));
 
-  gap: 25px;
+  gap:
+    25px;
+
 }
 
+
 .gallery-card {
-  height: 420px;
 
-  position: relative;
+  height:
+    420px;
 
-  overflow: hidden;
+  position:
+    relative;
 
-  border-radius: 30px;
+  overflow:
+    hidden;
 
-  text-decoration: none;
+  border-radius:
+    30px;
+
+  text-decoration:
+    none;
 
   border:
     1px solid rgba(255,255,255,.08);
@@ -346,48 +451,80 @@ a {
   transition:
     transform .4s ease,
     border-color .4s ease;
+
 }
+
 
 .gallery-card img {
-  width: 100%;
-  height: 100%;
 
-  object-fit: cover;
+  width:
+    100%;
 
-  transition: .5s;
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  transition:
+    .5s;
+
 }
 
+
 .gallery-overlay {
-  position: absolute;
-  inset: 0;
 
-  display: flex;
-  align-items: flex-end;
+  position:
+    absolute;
 
-  padding: 30px;
+  inset:
+    0;
+
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  padding:
+    30px;
 
   background:
     linear-gradient(
       transparent,
       rgba(0,0,0,.82)
     );
+
 }
+
 
 .gallery-overlay h3 {
-  font-size: 1.6rem;
 
-  color: white;
+  font-size:
+    1.6rem;
+
+  color:
+    white;
+
 }
 
+
 .gallery-card:hover {
-  transform: translateY(-8px);
+
+  transform:
+    translateY(-8px);
 
   border-color:
     rgba(255,255,255,.16);
+
 }
 
+
 .gallery-card:hover img {
-  transform: scale(1.08);
+
+  transform:
+    scale(1.08);
+
 }
 
 
@@ -396,45 +533,66 @@ a {
 ========================= */
 
 .future {
+
   padding:
     100px 25px;
+
 }
+
 
 .future h2 {
-  text-align: center;
 
-  font-size: 3.5rem;
+  text-align:
+    center;
+
+  font-size:
+    3.5rem;
+
 }
 
+
 .future-grid {
-  display: grid;
+
+  display:
+    grid;
 
   grid-template-columns:
     repeat(auto-fit,minmax(260px,1fr));
 
-  gap: 25px;
+  gap:
+    25px;
 
-  margin-top: 50px;
+  margin-top:
+    50px;
+
 }
 
-.future-card {
-  padding: 35px;
 
-  border-radius: 30px;
+.future-card {
+
+  padding:
+    35px;
+
+  border-radius:
+    30px;
 
   background:
     rgba(255,255,255,.04);
 
   border:
-    1px solid
-    rgba(255,255,255,.08);
+    1px solid rgba(255,255,255,.08);
 
-  backdrop-filter: blur(15px);
+  backdrop-filter:
+    blur(15px);
 
-  transition: .35s;
+  transition:
+    .35s;
+
 }
 
+
 .future-card:hover {
+
   transform:
     translateY(-10px);
 
@@ -443,62 +601,101 @@ a {
 
   box-shadow:
     0 18px 40px rgba(0,0,0,.25);
+
 }
+
 
 .future-card p {
-  color: #cbd5e1;
 
-  line-height: 1.7;
+  color:
+    #cbd5e1;
+
+  line-height:
+    1.7;
+
 }
-
 
 /* =========================
    FOOTER
 ========================= */
 
 .footer {
+
   padding:
     100px 25px 40px;
 
-  text-align: center;
+  text-align:
+    center;
+
 }
+
 
 .footer h2 {
-  font-size: 3rem;
+
+  font-size:
+    3rem;
+
 }
+
 
 .footer p {
-  color: #cbd5e1;
 
-  max-width: 700px;
+  color:
+    #cbd5e1;
 
-  margin: auto;
+  max-width:
+    700px;
 
-  line-height: 1.7;
+  margin:
+    auto;
+
+  line-height:
+    1.7;
+
 }
+
 
 .footer-links {
-  margin-top: 35px;
 
-  display: flex;
-  justify-content: center;
+  margin-top:
+    35px;
 
-  gap: 25px;
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    25px;
+
 }
+
 
 .footer-links a {
-  color: #86efac;
 
-  font-weight: 600;
+  color:
+    #86efac;
+
+  font-weight:
+    600;
+
 }
+
 
 .copyright {
-  margin-top: 50px;
 
-  font-size: .9rem;
+  margin-top:
+    50px;
 
-  color: #94a3b8;
+  font-size:
+    .9rem;
+
+  color:
+    #94a3b8;
+
 }
+
 
 
 /* =========================
@@ -506,21 +703,29 @@ a {
 ========================= */
 
 .reveal {
-  opacity: 0;
+
+  opacity:
+    0;
 
   transform:
     translateY(50px);
 
   transition:
     1s ease;
+
 }
 
+
 .reveal.show {
-  opacity: 1;
+
+  opacity:
+    1;
 
   transform:
     translateY(0);
+
 }
+
 
 
 /* =========================
@@ -530,25 +735,42 @@ a {
 @keyframes heroZoom {
 
   from {
-    transform: scale(1);
+
+    transform:
+      scale(1);
+
   }
 
   to {
-    transform: scale(1.12);
+
+    transform:
+      scale(1.12);
+
   }
+
 }
+
 
 @keyframes floatSkill {
 
   0%,
   100% {
-    transform: translateY(0px);
+
+    transform:
+      translateY(0px);
+
   }
 
+
   50% {
-    transform: translateY(-5px);
+
+    transform:
+      translateY(-5px);
+
   }
+
 }
+
 
 
 /* =========================
@@ -557,31 +779,64 @@ a {
 
 @media(max-width:700px){
 
+
   .hero h1 {
-    font-size: 4rem;
+
+    font-size:
+      4rem;
+
   }
+
 
   .about h2,
   .timeline h2,
   .gallery h2,
   .future h2 {
-    font-size: 2.5rem;
+
+    font-size:
+      2.5rem;
+
   }
+
 
   .gallery-card {
-    height: 320px;
+
+    height:
+      320px;
+
   }
 
-  .skills-bubbles {
-    gap: 10px;
 
-    margin-top: 30px;
+  .skills-bubbles,
+  .experience-bubbles {
+
+    gap:
+      10px;
+
+    margin-top:
+      30px;
+
   }
 
-  .skills-bubbles span {
-    padding: 8px 13px;
 
-    font-size: .76rem;
+  .skills-bubbles span,
+  .experience-bubbles span {
+
+    padding:
+      8px 13px;
+
+    font-size:
+      .76rem;
+
   }
+
+
+  .timeline-item {
+
+    padding-left:
+      25px;
+
+  }
+
+
 }
-```
