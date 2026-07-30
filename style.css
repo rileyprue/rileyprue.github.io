@@ -50,6 +50,10 @@ html {
    DARK MODE
 -------------------- */
 
+/* --------------------
+   DARK MODE
+-------------------- */
+
 body.dark-mode {
   --bg: #000000;
 
@@ -68,27 +72,53 @@ body.dark-mode {
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.65);
 
-  background: #000000;
+  background: #000000 !important;
+}
 
-   body.dark-mode .theme-toggle {
+/* dark mode theme toggle */
+body.dark-mode .theme-toggle {
   background: rgba(10, 10, 10, 0.78);
-
   border-color: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
 
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.55),
     0 0 0 1px rgba(255, 255, 255, 0.04) inset;
 }
 
+/* dark mode logo squares */
 body.dark-mode .company-logo {
   background: #0a0a0a;
-
   border-color: rgba(255, 255, 255, 0.08);
 
   box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.04) inset;
 }
+
+/* make outlines and cards dark */
+body.dark-mode .timeline-item,
+body.dark-mode .skills-bubbles span,
+body.dark-mode .experience-bubbles span {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* make text definitely switch */
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode strong,
+body.dark-mode .about-text,
+body.dark-mode .company-header p,
+body.dark-mode .timeline-item p {
+  color: var(--text);
+}
+
+body.dark-mode .about-text,
+body.dark-mode .company-header p,
+body.dark-mode .timeline-item p {
+  color: var(--muted);
 }
 /* --------------------
    BASE
