@@ -69,6 +69,26 @@ body.dark-mode {
   --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.65);
 
   background: #000000;
+
+   body.dark-mode .theme-toggle {
+  background: rgba(10, 10, 10, 0.78);
+
+  border-color: rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+body.dark-mode .company-logo {
+  background: #0a0a0a;
+
+  border-color: rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
 }
 /* --------------------
    BASE
@@ -388,12 +408,16 @@ h2 {
 
   object-fit: contain;
 
-  background: #ffffff;
+  background: var(--surface-solid);
 
   border: 1px solid var(--border);
   border-radius: 14px;
 
   padding: 8px;
+
+  box-shadow:
+    0 4px 12px rgba(15, 23, 42, 0.05),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
 
   flex-shrink: 0;
 }
@@ -440,7 +464,59 @@ h2 {
   background: rgba(37, 99, 235, 0.18);
   color: var(--text);
 }
-/* -------------------- THEME TOGGLE -------------------- */ .theme-toggle { position: fixed; top: 22px; right: 22px; z-index: 10000; width: 56px; height: 56px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(14px); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease; } .theme-toggle:hover { transform: translateY(-2px); } .theme-toggle .sun, .theme-toggle .moon { position: absolute; font-size: 1.2rem; transition: opacity 0.3s ease, transform 0.3s ease; } .theme-toggle .moon { opacity: 0; transform: rotate(90deg) scale(0.5); }
+
+.theme-toggle {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 10000;
+
+  width: 56px;
+  height: 56px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  color: var(--text);
+
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+
+  background: var(--surface-solid);
+}
+
+.theme-toggle .sun,
+.theme-toggle .moon {
+  position: absolute;
+  font-size: 1.2rem;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.theme-toggle .moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
 
 /* --------------------
    RESPONSIVE
