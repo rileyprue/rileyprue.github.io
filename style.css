@@ -953,4 +953,25 @@ max-width: 600px;
 
 }
 
+   .scroll-progress {
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:3px;
+
+width:0%;
+
+background:#22c55e;
+
+z-index:9999;
+
+box-shadow:
+0 0 15px #22c55e;
+
+}
+
 }
