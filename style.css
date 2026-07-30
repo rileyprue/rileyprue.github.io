@@ -24,8 +24,25 @@ html {
    THEME
 -------------------- */
 
-:root { --bg: #f5f7fb; --surface: rgba(255, 255, 255, 0.88); --surface-solid: #ffffff; --text: #0f172a; --muted: #64748b; --border: rgba(15, 23, 42, 0.08); --accent: #2563eb; --accent-dark: #1d4ed8; --shadow: 0 10px 30px rgba(15, 23, 42, 0.08); --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.12); --radius: 26px; } body.dark-mode { --bg: #0b1120; --surface: rgba(15, 23, 42, 0.9); --surface-solid: #111827; --text: #f8fafc; --muted: #cbd5e1; --border: rgba(255, 255, 255, 0.08); --shadow: 0 10px 30px rgba(0, 0, 0, 0.35); --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.45); }
+:root { --bg: #f5f7fb; --surface: rgba(255, 255, 255, 0.88); --surface-solid: #ffffff; --text: #0f172a; --muted: #64748b; --border: rgba(15, 23, 42, 0.08); --accent: #2563eb; --accent-dark: #1d4ed8; --shadow: 0 10px 30px rgba(15, 23, 42, 0.08); --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.12); --radius: 26px; } 
+body.dark-mode {
+  --bg: #000000;              /* pure black background */
+  --surface: rgba(0, 0, 0, 0.92);
+  --surface-solid: #050505;
 
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.65);
+}
+
+/* make the whole page black */
+body.dark-mode {
+  background: #000000;
+}
 /* --------------------
    BASE
 -------------------- */
