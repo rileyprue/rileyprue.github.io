@@ -39,7 +39,28 @@ observer.observe(section);
 });
 
 
+const progress =
+document.querySelector(".scroll-progress");
 
+
+window.addEventListener("scroll",()=>{
+
+let scrollTop =
+document.documentElement.scrollTop;
+
+let height =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight;
+
+
+let progressWidth =
+(scrollTop / height) * 100;
+
+
+progress.style.width =
+progressWidth + "%";
+
+});
 
 
 
