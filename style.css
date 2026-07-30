@@ -44,6 +44,160 @@ overflow-x:hidden;
 }
 
 /* =========================
+   TYPING EFFECT
+========================= */
+
+
+.typing {
+
+overflow:hidden;
+
+white-space:nowrap;
+
+border-right:
+3px solid #22c55e;
+
+width:max-content;
+
+animation:
+typing 2s steps(30),
+cursor .7s infinite;
+
+}
+
+
+
+@keyframes typing {
+
+from {
+
+width:0;
+
+}
+
+to {
+
+width:100%;
+
+}
+
+}
+
+
+
+@keyframes cursor {
+
+50% {
+
+border-color:transparent;
+
+}
+
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+
+.hero-actions {
+
+display:flex;
+
+gap:20px;
+
+align-items:center;
+
+margin-top:30px;
+
+}
+
+
+
+.linkedin-button {
+
+padding:
+14px 28px;
+
+
+border-radius:
+50px;
+
+
+background:
+rgba(10,102,194,.15);
+
+
+border:
+1px solid rgba(10,102,194,.5);
+
+
+color:#60a5fa;
+
+
+font-weight:
+700;
+
+
+backdrop-filter:
+blur(15px);
+
+
+animation:
+linkedinPulse 2s infinite;
+
+
+transition:.3s;
+
+}
+
+
+
+.linkedin-button:hover {
+
+transform:
+translateY(-5px);
+
+
+background:
+rgba(10,102,194,.3);
+
+
+}
+
+
+
+@keyframes linkedinPulse {
+
+
+0% {
+
+box-shadow:
+0 0 0 rgba(10,102,194,0);
+
+}
+
+
+50% {
+
+box-shadow:
+0 0 25px rgba(10,102,194,.7);
+
+}
+
+
+100% {
+
+box-shadow:
+0 0 0 rgba(10,102,194,0);
+
+}
+
+
+}
+
+/* =========================
    CURSOR GLOW
 ========================= */
 
