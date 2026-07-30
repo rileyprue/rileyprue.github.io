@@ -407,8 +407,18 @@ h2 {
    TIMELINE
 -------------------- */
 
+/* --------------------
+   TIMELINE
+-------------------- */
+
 .timeline {
   max-width: 1000px;
+  margin: 0 auto;      /* centers the whole section */
+}
+
+.timeline h2 {
+  text-align: center;  /* centers the Experience heading */
+  margin-bottom: 40px;
 }
 
 .timeline-item {
