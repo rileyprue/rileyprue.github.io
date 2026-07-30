@@ -3,24 +3,27 @@
 ========================= */
 
 const observer = new IntersectionObserver(
-(entries) => {
+(entries)=>{
 
-  entries.forEach(entry => {
+entries.forEach(entry=>{
 
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
+if(entry.isIntersecting){
 
-  });
+entry.target.classList.add("show");
+
+}
+
+});
 
 },
 {
-  threshold: 0.15
+threshold:.15
 });
 
 
-document.querySelectorAll(".reveal").forEach(section => {
-  observer.observe(section);
+document.querySelectorAll(".reveal")
+.forEach(section=>{
+observer.observe(section);
 });
 
 
@@ -31,27 +34,27 @@ document.querySelectorAll(".reveal").forEach(section => {
    SCROLL PROGRESS
 ========================= */
 
-const progress = document.querySelector(".scroll-progress");
+const progress =
+document.querySelector(".scroll-progress");
 
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-  if(!progress) return;
-
-
-  const scrollTop = document.documentElement.scrollTop;
-
-  const height =
-  document.documentElement.scrollHeight -
-  document.documentElement.clientHeight;
+if(!progress) return;
 
 
-  const percentage =
-  (scrollTop / height) * 100;
+const scrollTop =
+document.documentElement.scrollTop;
 
 
-  progress.style.width =
-  percentage + "%";
+const height =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight;
+
+
+progress.style.width =
+(scrollTop / height) * 100 + "%";
+
 
 });
 
@@ -59,51 +62,26 @@ window.addEventListener("scroll", () => {
 
 
 
-
-
 /* =========================
-   HERO IMAGE MOVEMENT
+   HERO PARALLAX
 ========================= */
+
 
 const heroImage =
 document.querySelector(".hero-image");
 
 
-window.addEventListener("scroll", () => {
-
-  if(!heroImage) return;
+window.addEventListener("scroll",()=>{
 
 
-  const scroll =
-  window.scrollY;
+if(!heroImage) return;
 
 
-  heroImage.style.transform =
-  `translateY(${scroll * 0.08}px) scale(1.08)`;
+heroImage.style.transform =
+`translateY(${window.scrollY * .12}px) scale(1.05)`;
+
 
 });
-
-
-
-
-
-
-
-/* =========================
-   IMAGE LOADING
-========================= */
-
-document.querySelectorAll("img").forEach(image => {
-
-  image.addEventListener("load", () => {
-
-    image.classList.add("loaded");
-
-  });
-
-});
-
-
 
 
 
@@ -113,21 +91,24 @@ document.querySelectorAll("img").forEach(image => {
    CURSOR GLOW
 ========================= */
 
+
 const cursor =
 document.querySelector(".cursor-glow");
 
 
-document.addEventListener("mousemove", (e) => {
-
-  if(!cursor) return;
+document.addEventListener("mousemove",(e)=>{
 
 
-  cursor.style.left =
-  e.clientX + "px";
+if(!cursor) return;
 
 
-  cursor.style.top =
-  e.clientY + "px";
+cursor.style.left =
+e.clientX + "px";
+
+
+cursor.style.top =
+e.clientY + "px";
+
 
 });
 
@@ -135,22 +116,20 @@ document.addEventListener("mousemove", (e) => {
 
 
 
-
-
 /* =========================
-   TYPEWRITER EFFECT
+   TYPING EFFECT
 ========================= */
+
 
 const typingElements =
 document.querySelectorAll(".typing");
 
 
 const typingObserver =
-new IntersectionObserver(
+new IntersectionObserver((entries)=>{
 
-(entries) => {
 
-entries.forEach(entry => {
+entries.forEach(entry=>{
 
 
 if(entry.isIntersecting){
@@ -161,26 +140,24 @@ entry.target;
 
 
 const text =
-element.textContent.trim();
+element.textContent;
 
 
-element.textContent = "";
+element.textContent="";
 
 
-let index = 0;
-
+let i=0;
 
 
 function type(){
 
-if(index < text.length){
+if(i < text.length){
 
-element.textContent +=
-text[index];
+element.textContent += text[i];
 
-index++;
+i++;
 
-setTimeout(type, 65);
+setTimeout(type,60);
 
 }
 
@@ -199,13 +176,13 @@ typingObserver.unobserve(element);
 });
 
 
-},
-{
-threshold:0.5
+},{
+threshold:.8
 });
 
 
-typingElements.forEach(element => {
+
+typingElements.forEach(element=>{
 
 typingObserver.observe(element);
 
