@@ -46,8 +46,6 @@ body {
 :root {
 
 
-  /* Dark Default */
-
   --bg:#0b1220;
 
 
@@ -107,8 +105,7 @@ body {
 body.light-mode {
 
 
-  --bg:
-  #f8fafc;
+  --bg:#f8fafc;
 
 
   --surface:
@@ -189,6 +186,7 @@ linear-gradient(
 
 
 background-size:
+
 160% 160%,
 160% 160%,
 100% 100%;
@@ -441,11 +439,6 @@ margin-bottom:25px;
 
 
 }
-
-
-
-
-
 /* ==================================================
    HERO
 ================================================== */
@@ -677,6 +670,8 @@ transform:scale(1.15);
 
 }
 
+
+
 /* ==================================================
    HERO ACTIONS + LINKEDIN
 ================================================== */
@@ -756,8 +751,6 @@ height:22px;
 
 
 }
-
-
 
 
 
@@ -1175,13 +1168,6 @@ margin:0;
 
 
 }
-
-
-
-
-
-
-
 /* ==================================================
    THEME BUTTON
 ================================================== */
@@ -1343,6 +1329,265 @@ translateY(0);
 
 
 /* ==================================================
+   CONTACT / REACH OUT
+================================================== */
+
+
+.contact-section {
+
+  max-width:1000px;
+
+  margin:auto;
+
+  text-align:center;
+
+  padding-top:100px;
+
+  padding-bottom:80px;
+
+}
+
+
+
+.contact-section h2 {
+
+  font-family:
+  "JetBrains Mono",
+  monospace;
+
+  font-size:
+  clamp(2.3rem,6vw,4rem);
+
+  font-weight:700;
+
+  letter-spacing:-.04em;
+
+  color:var(--text);
+
+  margin-bottom:25px;
+
+}
+
+
+
+.contact-section h2::after {
+
+  content:"_";
+
+  color:var(--accent);
+
+  animation:
+  blink .9s infinite;
+
+}
+
+
+
+.contact-section p {
+
+  max-width:700px;
+
+  margin:0 auto 40px;
+
+  color:var(--muted);
+
+  font-size:1.05rem;
+
+  line-height:1.8;
+
+}
+
+
+
+
+.contact-buttons {
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+gap:15px;
+
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+.contact-btn {
+
+
+display:inline-flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+gap:10px;
+
+
+
+padding:
+12px 26px;
+
+
+
+border-radius:
+999px;
+
+
+
+background:
+var(--surface-solid);
+
+
+
+border:
+1px solid var(--border);
+
+
+
+color:
+var(--text);
+
+
+
+font-weight:700;
+
+
+
+text-decoration:none;
+
+
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.12);
+
+
+
+transition:
+.3s ease;
+
+
+
+}
+
+
+
+.contact-btn:hover {
+
+
+transform:
+translateY(-5px);
+
+
+
+background:
+var(--accent);
+
+
+
+color:white;
+
+
+
+box-shadow:
+var(--shadow);
+
+
+
+}
+
+
+
+
+
+/* ==================================================
+   FOOTER / COPYRIGHT
+================================================== */
+
+
+.site-footer {
+
+
+max-width:1000px;
+
+
+margin:auto;
+
+
+
+text-align:center;
+
+
+
+padding:
+35px 20px;
+
+
+
+border-top:
+1px solid var(--border);
+
+
+
+color:
+var(--muted);
+
+
+
+font-size:.85rem;
+
+
+
+line-height:1.7;
+
+
+
+}
+
+
+
+.site-footer p {
+
+
+margin:
+8px 0;
+
+
+
+}
+
+
+
+.site-footer strong {
+
+
+color:
+var(--text);
+
+
+
+}
+
+
+
+
+
+
+
+/* ==================================================
    TABLET
 ================================================== */
 
@@ -1426,6 +1671,16 @@ padding:28px;
 
 font-size:1rem;
 
+
+
+}
+
+
+
+.contact-section {
+
+
+padding-top:80px;
 
 
 }
@@ -1584,6 +1839,49 @@ top:15px;
 
 right:15px;
 
+
+
+}
+
+
+
+.contact-section h2 {
+
+
+font-size:2rem;
+
+
+}
+
+
+
+.contact-section p {
+
+
+font-size:.95rem;
+
+
+}
+
+
+
+.contact-btn {
+
+
+width:100%;
+
+
+max-width:300px;
+
+
+}
+
+
+
+.site-footer {
+
+
+font-size:.78rem;
 
 
 }
