@@ -394,96 +394,47 @@ display:none;
 /* ==================================================
    TERMINAL BADGE
 ================================================== */
-
+/* ==================================================
+   TERMINAL BADGE
+================================================== */
 
 .terminal {
+  display:inline-block;
+  font-family:"JetBrains Mono", monospace;
+  font-size:.85rem;
+  color:var(--accent);
 
+  background:rgba(96,165,250,.12);
+  border:1px solid var(--border);
 
-display:inline-block;
+  padding:8px 16px;
+  border-radius:999px;
 
-
-font-family:
-"JetBrains Mono",
-monospace;
-
-
-
-font-size:.85rem;
-
-
-color:var(--accent);
-
-
-
-background:
-rgba(96,165,250,.12);
-
-
-
-border:
-1px solid var(--border);
-
-
-
-padding:
-8px 16px;
-
-
-
-border-radius:
-999px;
-
-
-
-margin-bottom:25px;
+  margin-bottom:25px;
+}
 
 /* Hero terminal matches about.me / experience */
 .hero-terminal {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
-  background: var(--surface-solid);
-  border: 1px solid var(--border);
+  background:rgba(96,165,250,.12);
+  border:1px solid var(--border);
 
-  padding: 8px 16px;
-  border-radius: 999px;
+  padding:8px 16px;
+  border-radius:999px;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,.12);
-
-  margin-bottom: 18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  margin-bottom:18px;
 }
 
-/* Blinking cursor like section headers */
 .hero-terminal::after {
-  content: "_";
-  color: var(--accent);
-  margin-left: 2px;
-  animation: blink .9s infinite;
-}
-
-/* Make the hero terminal look like the section header bubbles */
-.hero-terminal {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "JetBrains Mono", monospace;
-  font-size: .85rem;
-  font-weight: 500;
-
-  color: var(--accent);
-
-  background: var(--surface-solid);
-  border: 1px solid var(--border);
-
-  padding: 8px 16px;
-  border-radius: 999px;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,.12);
-
-  margin-bottom: 10px;
+  content:"_";
+  color:var(--accent);
+  margin-left:2px;
+  animation:blink .9s infinite;
 }
 
 
