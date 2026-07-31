@@ -437,6 +437,28 @@ border-radius:
 
 margin-bottom:25px;
 
+/* Make the hero terminal look like the section header bubbles */
+.hero-terminal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: .85rem;
+  font-weight: 500;
+
+  color: var(--accent);
+
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+
+  margin-bottom: 10px;
+}
 
 }
 /* ==================================================
