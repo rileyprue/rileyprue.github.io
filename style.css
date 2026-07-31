@@ -611,33 +611,6 @@ body.light-mode .hero-subtitle {
 }
 
 
-/* LinkedIn Bubble */
-
-.linkedin-bubble {
-
-  width:54px;
-  height:54px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  border-radius:50%;
-
-  background:var(--surface);
-
-  color:#0a66c2;
-
-  border:1px solid var(--border);
-
-  backdrop-filter:blur(18px);
-
-  box-shadow:var(--shadow);
-
-  transition:.3s ease;
-
-}
-
 
 
 .linkedin-bubble:hover {
