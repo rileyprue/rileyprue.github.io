@@ -675,7 +675,15 @@ height:22px;
 
 
 }
+/* Move the existing LinkedIn bubble to the top-right */
+.linkedin-top {
+  position: fixed;
 
+  top: 22px;
+  right: 88px;
+
+  z-index: 9999;
+}
 
 
 
