@@ -23,20 +23,7 @@ html {
    THEME
 ================================================== */
 
-
-/* --------------------
-   DEFAULT THEME (DARK)
--------------------- */
-
 :root {
-
-  /* Backgrounds */
-  --bg: #0f172a;
-  --bg-secondary: #111827;
-
-  /* Animated glow colors */
-  --glow-1: rgba(96,165,250,.18);
-  --glow-2: rgba(59,130,246,.14);
 
   /* Cards */
   --surface: rgba(17,24,39,.78);
@@ -64,77 +51,8 @@ html {
 }
 
 
-/* --------------------
-   LIGHT MODE
--------------------- */
-
-body.light-mode {
-
-  /* Backgrounds */
-  --bg: #f8fafc;
-  --bg-secondary: #e2e8f0;
-
-  /* Soft light glows */
-  --glow-1: rgba(37,99,235,.10);
-  --glow-2: rgba(59,130,246,.08);
-
-  /* Cards */
-  --surface: rgba(255,255,255,.88);
-  --surface-solid: #ffffff;
-
-  /* Text */
-  --text: #0f172a;
-  --muted: #64748b;
-
-  /* Borders */
-  --border: rgba(15,23,42,.08);
-
-  /* Accent */
-  --accent: #2563eb;
-  --accent-dark: #1d4ed8;
-
-  /* Shadows */
-  --shadow:
-    0 10px 30px rgba(15,23,42,.08);
-
-  --shadow-lg:
-    0 20px 45px rgba(15,23,42,.12);
-
-  /* Force a true light background */
-  background:
-
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(37,99,235,.10),
-      transparent 32%
-    ),
-
-    radial-gradient(
-      circle at 85% 80%,
-      rgba(59,130,246,.08),
-      transparent 30%
-    ),
-
-    linear-gradient(
-      135deg,
-      #f8fafc 0%,
-      #e2e8f0 100%
-    );
-
-  background-size:
-    140% 140%,
-    160% 160%,
-    100% 100%;
-
-  background-attachment: fixed;
-
-  animation:
-    gradientMove 18s ease-in-out infinite;
-}
-
-
 /* ==================================================
-   BASE
+   DEFAULT DARK MODE
 ================================================== */
 
 body {
@@ -147,20 +65,20 @@ body {
 
     radial-gradient(
       circle at 15% 20%,
-      var(--glow-1),
+      rgba(96,165,250,.18),
       transparent 32%
     ),
 
     radial-gradient(
       circle at 85% 80%,
-      var(--glow-2),
+      rgba(59,130,246,.14),
       transparent 30%
     ),
 
     linear-gradient(
       135deg,
-      var(--bg) 0%,
-      var(--bg-secondary) 100%
+      #0f172a 0%,
+      #111827 100%
     );
 
   background-size:
@@ -181,9 +99,71 @@ body {
 }
 
 
-/* --------------------
-   SMOOTH GRADIENT MOTION
--------------------- */
+/* ==================================================
+   LIGHT MODE
+================================================== */
+
+body.light-mode {
+
+  /* Cards */
+  --surface: rgba(255,255,255,.92);
+  --surface-solid: #ffffff;
+
+  /* Text */
+  --text: #0f172a;
+  --muted: #64748b;
+
+  /* Borders */
+  --border: rgba(15,23,42,.08);
+
+  /* Accent */
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+
+  /* Shadows */
+  --shadow:
+    0 10px 30px rgba(15,23,42,.08);
+
+  --shadow-lg:
+    0 20px 45px rgba(15,23,42,.12);
+
+  /* Light animated background */
+
+  background:
+
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(37,99,235,.12),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(59,130,246,.10),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f1f5f9 100%
+    );
+
+  background-size:
+    140% 140%,
+    160% 160%,
+    100% 100%;
+
+  background-attachment: fixed;
+
+  animation:
+    gradientMove 18s ease-in-out infinite;
+}
+
+
+/* ==================================================
+   ANIMATED BACKGROUND
+================================================== */
 
 @keyframes gradientMove {
 
@@ -217,9 +197,9 @@ body {
 }
 
 
-/* --------------------
+/* ==================================================
    LAYOUT
--------------------- */
+================================================== */
 
 section {
   width: 100%;
@@ -235,9 +215,9 @@ section {
 }
 
 
-/* --------------------
+/* ==================================================
    TYPOGRAPHY
--------------------- */
+================================================== */
 
 .section-terminal {
   font-family: "JetBrains Mono", monospace;
@@ -276,9 +256,9 @@ section {
 }
 
 
-/* --------------------
+/* ==================================================
    TERMINAL BADGE
--------------------- */
+================================================== */
 
 .terminal {
   display: inline-block;
@@ -300,9 +280,9 @@ section {
 }
 
 
-/* --------------------
+/* ==================================================
    HERO
--------------------- */
+================================================== */
 
 .hero {
   position: relative;
@@ -340,8 +320,6 @@ section {
   animation:
     heroZoom 18s ease-in-out infinite alternate;
 }
-
-/* Lighter overlay when light mode is active */
 
 body.light-mode .hero::before {
 
@@ -419,9 +397,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    LINKEDIN BUTTON
--------------------- */
+================================================== */
 
 .linkedin-bubble {
   width: 48px;
@@ -452,9 +430,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    ABOUT
--------------------- */
+================================================== */
 
 .about {
   text-align: center;
@@ -481,9 +459,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    SKILLS & EXPERIENCE TAGS
--------------------- */
+================================================== */
 
 .skills-bubbles,
 .experience-bubbles {
@@ -531,9 +509,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    EXPERIENCE
--------------------- */
+================================================== */
 
 .timeline {
   text-align: center;
@@ -583,9 +561,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    COMPANY HEADER
--------------------- */
+================================================== */
 
 .company-header {
   display: flex;
@@ -634,9 +612,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    THEME TOGGLE
--------------------- */
+================================================== */
 
 .theme-toggle {
   position: fixed;
@@ -669,9 +647,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    REVEAL ANIMATION
--------------------- */
+================================================== */
 
 .reveal {
   opacity: 0;
@@ -695,9 +673,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    TABLET
--------------------- */
+================================================== */
 
 @media (max-width: 768px) {
 
@@ -730,9 +708,9 @@ body.light-mode .hero::before {
 }
 
 
-/* --------------------
+/* ==================================================
    MOBILE
--------------------- */
+================================================== */
 
 @media (max-width: 480px) {
 
