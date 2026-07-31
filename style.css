@@ -1114,83 +1114,54 @@ margin:0;
    THEME BUTTON
 ================================================== */
 
-
 .theme-toggle {
 
+  position:fixed;
 
-position:fixed;
+  top:22px;
 
+  right:22px;
 
-
-top:22px;
-
-
-right:22px;
+  z-index:9999;
 
 
+  width:54px;
 
-z-index:9999;
-
-
-
-width:54px;
+  height:54px;
 
 
-height:54px;
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
 
 
-
-display:flex;
-
+  font-size:1.3rem;
 
 
-align-items:center;
+  border-radius:50%;
 
 
-justify-content:center;
+  border:1px solid var(--border);
 
 
-
-font-size:1.3rem;
-
+  background:var(--surface);
 
 
-border-radius:50%;
+  color:var(--text);
 
 
-
-border:
-1px solid var(--border);
+  backdrop-filter:blur(18px);
 
 
-
-background:
-var(--surface);
+  box-shadow:var(--shadow);
 
 
-
-color:
-var(--text);
+  cursor:pointer;
 
 
-
-backdrop-filter:
-blur(18px);
-
-
-
-box-shadow:
-var(--shadow);
-
-
-
-cursor:pointer;
-
-
-
-transition:.3s ease;
-
-
+  transition:.3s ease;
 
 }
 
@@ -1198,18 +1169,12 @@ transition:.3s ease;
 
 .theme-toggle:hover {
 
+  transform:
+  translateY(-4px)
+  rotate(10deg);
 
 
-transform:
-translateY(-4px)
-rotate(10deg);
-
-
-
-box-shadow:
-var(--shadow-lg);
-
-
+  box-shadow:var(--shadow-lg);
 
 }
 
