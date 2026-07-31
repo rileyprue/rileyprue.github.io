@@ -99,6 +99,37 @@ body.light-mode {
 
   --shadow-lg:
     0 20px 45px rgba(15,23,42,.12);
+
+  /* Force a true light background */
+  background:
+
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(37,99,235,.10),
+      transparent 32%
+    ),
+
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(59,130,246,.08),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f8fafc 0%,
+      #e2e8f0 100%
+    );
+
+  background-size:
+    140% 140%,
+    160% 160%,
+    100% 100%;
+
+  background-attachment: fixed;
+
+  animation:
+    gradientMove 18s ease-in-out infinite;
 }
 
 
@@ -136,6 +167,8 @@ body {
     140% 140%,
     160% 160%,
     100% 100%;
+
+  background-attachment: fixed;
 
   animation:
     gradientMove 18s ease-in-out infinite;
@@ -306,6 +339,20 @@ section {
 
   animation:
     heroZoom 18s ease-in-out infinite alternate;
+}
+
+/* Lighter overlay when light mode is active */
+
+body.light-mode .hero::before {
+
+  background:
+
+    linear-gradient(
+      rgba(255,255,255,.25),
+      rgba(255,255,255,.45)
+    ),
+
+    url("assets/riley-hero.jpg") center/cover no-repeat;
 }
 
 .hero::after {
