@@ -45,11 +45,19 @@
 <div class="scroll-progress"></div>
 
 
+
 <!-- THEME BUTTON -->
 
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+<button 
+class="theme-toggle" 
+id="themeToggle" 
+aria-label="Toggle theme">
+
 ☀️
+
 </button>
+
+
 
 
 
@@ -74,14 +82,17 @@ class="hero-image"
 </p>
 
 
+
 <h1>
 Riley Prue
 </h1>
 
 
+
 <p class="hero-subtitle">
 Junior Fire Alarm Technician • Technology • Future Electrician • Future Firefighter
 </p>
+
 
 
 
@@ -100,7 +111,9 @@ width="22"
 height="22"
 fill="currentColor">
 
+
 <path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zm.02 4H1v15h4V7.5zm6 0H7v15h4v-8.2c0-4.6 6-5 6 0v8.2h4v-9.5c0-7.4-8.4-7.1-10-3.5V7.5z"/>
+
 
 </svg>
 
@@ -118,7 +131,6 @@ fill="currentColor">
 
 <!-- ABOUT -->
 
-
 <section class="about reveal" id="about">
 
 
@@ -126,7 +138,6 @@ fill="currentColor">
 class="terminal section-terminal"
 data-text="> about.me">
 </p>
-
 
 
 <h2>
@@ -205,11 +216,9 @@ data-text="> experience">
 </p>
 
 
-
 <h2>
 Experience
 </h2>
-
 
 
 
@@ -231,6 +240,7 @@ src="assets/oakridge-logo.png"
 class="company-logo"
 alt="Oakridge Building Solutions"
 >
+
 
 
 <div>
@@ -306,8 +316,8 @@ alt="Home Hardware Building Centre"
 >
 
 
-<div>
 
+<div>
 
 <h3>
 Home Hardware Building Centre
@@ -360,8 +370,8 @@ alt="Splash & Wax Mobile Detailing"
 >
 
 
-<div>
 
+<div>
 
 <h3>
 Splash & Wax Mobile Detailing
@@ -392,6 +402,7 @@ Performed professional interior and exterior vehicle detailing while maintaining
 
 
 
+
 </section>
 
 
@@ -414,7 +425,8 @@ const toggle = document.getElementById("themeToggle");
 const body = document.body;
 
 
-// Dark mode starts automatically
+
+// Start website in dark mode
 
 body.classList.remove("light-mode");
 
@@ -429,7 +441,7 @@ body.classList.toggle("light-mode");
 
 
 
-if(body.classList.contains("light-mode")) {
+if (body.classList.contains("light-mode")) {
 
 
 toggle.textContent = "🌙";
@@ -451,6 +463,7 @@ toggle.textContent = "☀️";
 
 
 
+
 /* ==========================
    TERMINAL TYPE EFFECT
 ========================== */
@@ -464,6 +477,7 @@ let typingQueue = [];
 let isTyping = false;
 
 
+
 function typeTerminal(element) {
 
 
@@ -475,10 +489,12 @@ const text = element.dataset.text;
 
 element.textContent = "";
 
+
 element.classList.add("typing");
 
 
 let index = 0;
+
 
 
 const interval = setInterval(() => {
@@ -488,6 +504,7 @@ element.textContent += text[index];
 
 
 index++;
+
 
 
 if(index >= text.length){
@@ -502,7 +519,7 @@ resolve();
 }
 
 
-}, 70);
+},70);
 
 
 
@@ -522,6 +539,7 @@ if(isTyping) return;
 isTyping = true;
 
 
+
 for(const item of typingQueue){
 
 
@@ -531,8 +549,8 @@ await typeTerminal(item);
 }
 
 
-typingQueue = [];
 
+typingQueue = [];
 
 isTyping = false;
 
@@ -567,7 +585,9 @@ runTypingQueue();
 
 },{
 
+
 threshold:0.5
+
 
 });
 
@@ -590,3 +610,4 @@ observer.observe(terminal);
 </body>
 
 </html>
+
