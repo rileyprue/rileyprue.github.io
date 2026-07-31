@@ -1,6 +1,6 @@
 /* ==================================================
    RILEY PRUE — CLEAN PROFESSIONAL PORTFOLIO
-   Organized • Responsive • Mobile Friendly
+   Responsive • Consistent • Professional
 ================================================== */
 
 
@@ -25,6 +25,7 @@ html {
 
 :root {
   --bg: #f8fafc;
+
   --surface: rgba(255,255,255,.88);
   --surface-solid: #ffffff;
 
@@ -50,7 +51,7 @@ html {
 body.dark-mode {
   --bg: #000000;
 
-  --surface: rgba(10,10,10,.9);
+  --surface: rgba(10,10,10,.92);
   --surface-solid: #050505;
 
   --text: #f8fafc;
@@ -92,9 +93,11 @@ section {
   padding: 100px 20px;
 }
 
-.container {
+.container,
+.about,
+.timeline {
   width: 100%;
-  max-width: 1050px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -105,17 +108,22 @@ section {
 
 .section-terminal {
   font-family: "JetBrains Mono", monospace;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
   font-weight: 700;
   letter-spacing: -.04em;
+
   text-align: center;
+
   margin-bottom: 42px;
+
   color: var(--text);
 }
 
 .section-terminal::after {
   content: "_";
   color: var(--accent);
+
   animation: blink .9s infinite;
 }
 
@@ -130,7 +138,7 @@ section {
 
 
 /* --------------------
-   TERMINAL TAG
+   TERMINAL BADGE
 -------------------- */
 
 .terminal {
@@ -178,7 +186,7 @@ section {
 
   background:
     linear-gradient(rgba(0,0,0,.45),
-      rgba(0,0,0,.7)),
+      rgba(0,0,0,.72)),
     url("assets/riley-hero.jpg") center/cover no-repeat;
 
   z-index: -2;
@@ -214,7 +222,8 @@ section {
 .hero h1 {
   color: #ffffff;
 
-  font-size: clamp(3.2rem, 9vw, 6rem);
+  font-size: clamp(3.3rem, 9vw, 6rem);
+
   line-height: .95;
   letter-spacing: -.05em;
   font-weight: 800;
@@ -228,8 +237,8 @@ section {
   color: rgba(255,255,255,.92);
 
   font-size: 1.05rem;
-  max-width: 620px;
 
+  max-width: 620px;
   margin: 0 auto 28px;
 
   text-shadow: 0 4px 20px rgba(0,0,0,.5);
@@ -237,7 +246,7 @@ section {
 
 
 /* --------------------
-   SOCIAL BUTTON
+   LINKEDIN BUTTON
 -------------------- */
 
 .linkedin-bubble {
@@ -282,10 +291,14 @@ section {
 }
 
 .about-text {
-  font-size: 1.05rem;
-  color: var(--muted);
+  max-width: 820px;
 
-  margin-bottom: 22px;
+  margin: 0 auto 24px;
+
+  font-size: 1.05rem;
+  line-height: 1.85;
+
+  color: var(--muted);
 }
 
 .about-text strong {
@@ -294,7 +307,7 @@ section {
 
 
 /* --------------------
-   BUBBLE TAGS
+   SKILLS & EXPERIENCE TAGS
 -------------------- */
 
 .skills-bubbles,
@@ -305,7 +318,7 @@ section {
 
   gap: 10px;
 
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
 .skills-bubbles span,
@@ -315,8 +328,8 @@ section {
   justify-content: center;
 
   background: var(--surface-solid);
-  border: 1px solid var(--border);
 
+  border: 1px solid var(--border);
   border-radius: 999px;
 
   padding: 7px 14px;
@@ -360,15 +373,15 @@ section {
   border: 1px solid var(--border);
   border-radius: var(--radius);
 
-  padding: 32px;
+  padding: 36px;
 
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 
   backdrop-filter: blur(14px);
 
   box-shadow: var(--shadow);
 
-  text-align: left;
+  text-align: center;
 
   transition: .25s ease;
 }
@@ -396,16 +409,21 @@ section {
 
 .company-header {
   display: flex;
+  flex-direction: column;
+
   align-items: center;
+  justify-content: center;
 
-  gap: 18px;
+  gap: 14px;
 
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+
+  text-align: center;
 }
 
 .company-logo {
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
 
   object-fit: contain;
 
@@ -415,17 +433,22 @@ section {
   border-radius: 14px;
 
   padding: 8px;
-
-  flex-shrink: 0;
 }
 
 .company-header h3 {
-  font-size: 1.12rem;
+  font-size: 1.18rem;
   margin-bottom: 4px;
 }
 
 .company-header p,
 .timeline-item p {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
   color: var(--muted);
 }
 
@@ -491,7 +514,7 @@ section {
 @media (max-width: 768px) {
 
   section {
-    padding: 80px 18px;
+    padding: 84px 18px;
   }
 
   .hero {
@@ -500,7 +523,7 @@ section {
   }
 
   .hero h1 {
-    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    font-size: clamp(2.8rem, 12vw, 4.6rem);
   }
 
   .hero-subtitle {
@@ -508,11 +531,12 @@ section {
   }
 
   .timeline-item {
-    padding: 26px;
+    padding: 28px;
   }
 
-  .company-header {
-    align-items: flex-start;
+  .about-text,
+  .timeline-item p {
+    line-height: 1.75;
   }
 }
 
@@ -528,7 +552,16 @@ section {
   }
 
   .section-terminal {
-    margin-bottom: 34px;
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: .95rem;
   }
 
   .about-text {
@@ -547,23 +580,21 @@ section {
   }
 
   .timeline-item {
-    padding: 22px;
+    padding: 24px;
     border-radius: 20px;
   }
 
-  .company-header {
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
+  .company-logo {
+    width: 54px;
+    height: 54px;
   }
 
-  .company-header div {
-    width: 100%;
+  .company-header h3 {
+    font-size: 1.08rem;
   }
 
-  .timeline-item {
-    text-align: center;
+  .timeline-item p {
+    font-size: .96rem;
   }
 
   .theme-toggle {
