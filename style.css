@@ -437,6 +437,32 @@ border-radius:
 
 margin-bottom:25px;
 
+/* Hero terminal matches about.me / experience */
+.hero-terminal {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+
+  margin-bottom: 18px;
+}
+
+/* Blinking cursor like section headers */
+.hero-terminal::after {
+  content: "_";
+  color: var(--accent);
+  margin-left: 2px;
+  animation: blink .9s infinite;
+}
+
 /* Make the hero terminal look like the section header bubbles */
 .hero-terminal {
   display: inline-flex;
@@ -459,6 +485,8 @@ margin-bottom:25px;
 
   margin-bottom: 10px;
 }
+
+
 
 }
 /* ==================================================
