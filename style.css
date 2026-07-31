@@ -381,7 +381,7 @@ section {
 
   box-shadow: var(--shadow);
 
-  text-align: center;
+  text-align: left;
 
   transition: .25s ease;
 }
@@ -409,16 +409,13 @@ section {
 
 .company-header {
   display: flex;
-  flex-direction: column;
-
   align-items: center;
-  justify-content: center;
 
-  gap: 14px;
+  gap: 18px;
 
   margin-bottom: 20px;
 
-  text-align: center;
+  text-align: left;
 }
 
 .company-logo {
@@ -433,6 +430,8 @@ section {
   border-radius: 14px;
 
   padding: 8px;
+
+  flex-shrink: 0;
 }
 
 .company-header h3 {
@@ -443,8 +442,6 @@ section {
 .company-header p,
 .timeline-item p {
   max-width: 720px;
-
-  margin: 0 auto;
 
   font-size: 1rem;
   line-height: 1.8;
@@ -582,6 +579,15 @@ section {
   .timeline-item {
     padding: 24px;
     border-radius: 20px;
+
+    text-align: left;
+  }
+
+  .company-header {
+    flex-direction: row;
+    align-items: flex-start;
+
+    text-align: left;
   }
 
   .company-logo {
