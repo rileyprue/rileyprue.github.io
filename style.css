@@ -600,54 +600,41 @@ body.light-mode .hero-subtitle {
    HERO ACTIONS + LINKEDIN
 ================================================== */
 
-
 .hero-actions {
 
-display:flex;
+  display:flex;
 
-justify-content:center;
+  justify-content:center;
 
-margin-top:30px;
+  margin-top:30px;
 
 }
 
 
+/* LinkedIn Bubble */
 
 .linkedin-bubble {
 
+  width:54px;
+  height:54px;
 
-width:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-height:52px;
+  border-radius:50%;
 
+  background:var(--surface);
 
+  color:#0a66c2;
 
-display:flex;
+  border:1px solid var(--border);
 
-align-items:center;
+  backdrop-filter:blur(18px);
 
-justify-content:center;
+  box-shadow:var(--shadow);
 
-
-
-border-radius:50%;
-
-
-
-background:white;
-
-
-color:#0a66c2;
-
-
-
-box-shadow:
-0 12px 30px rgba(0,0,0,.25);
-
-
-
-transition:.3s ease;
-
+  transition:.3s ease;
 
 }
 
@@ -655,12 +642,11 @@ transition:.3s ease;
 
 .linkedin-bubble:hover {
 
+  transform:
+  translateY(-5px)
+  scale(1.05);
 
-transform:
-translateY(-5px)
-scale(1.05);
-
-
+  box-shadow:var(--shadow-lg);
 
 }
 
@@ -668,24 +654,48 @@ scale(1.05);
 
 .linkedin-bubble svg {
 
+  width:23px;
 
-width:22px;
-
-height:22px;
-
+  height:23px;
 
 }
-/* Move the existing LinkedIn bubble to the top-right */
+
+
+
+/* Fixed top buttons */
+
 .linkedin-top {
-  position: fixed;
 
-  top: 22px;
-  right: 88px;
+  position:fixed;
 
-  z-index: 9999;
+  top:22px;
+
+  right:88px;
+
+  z-index:9999;
+
 }
 
 
+/* Dark Mode */
+
+body:not(.light-mode) .linkedin-bubble {
+
+  background:
+  rgba(15,23,42,.75);
+
+}
+
+
+
+/* Light Mode */
+
+body.light-mode .linkedin-bubble {
+
+  background:
+  rgba(255,255,255,.75);
+
+}
 
 
 /* ==================================================
