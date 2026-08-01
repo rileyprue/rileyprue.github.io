@@ -6,16 +6,17 @@
   position: relative;
   min-height: 100vh;
 
-  /* true page centering */
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  text-align: center;
+
+  /* keep your original spacing */
+  padding: 0 20px;
+  padding-top: 100px;
 
   overflow: hidden;
-  text-align: center;
   background: transparent;
 }
 
@@ -49,9 +50,9 @@ body.light-mode .hero::before {
 -------------------- */
 
 .hero-overlay {
-  position: relative;
-
-  width: min(100%, 900px);
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
 
   display: flex;
   flex-direction: column;
@@ -59,16 +60,7 @@ body.light-mode .hero::before {
   justify-content: center;
 
   text-align: center;
-
-  margin: 0 auto;
-  padding: 0 20px;
-
   gap: 14px;
-}
-
-.hero-overlay > * {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* --------------------
@@ -202,6 +194,24 @@ body.light-mode .hero-subtitle {
 .linkedin-bubble svg {
   width: 23px;
   height: 23px;
+}
+
+/* Fixed top buttons */
+.linkedin-top {
+  position: fixed;
+  top: 22px;
+  right: 88px;
+  z-index: 9999;
+}
+
+/* Dark Mode */
+body:not(.light-mode) .linkedin-bubble {
+  background: rgba(15,23,42,.75);
+}
+
+/* Light Mode */
+body.light-mode .linkedin-bubble {
+  background: rgba(255,255,255,.75);
 }
 
 /* ==================================================
