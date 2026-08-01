@@ -19,6 +19,7 @@
   --radius-sm:14px;
 }
 
+
 /* Light Mode */
 body.light-mode{
   --bg:#f8fafc;
