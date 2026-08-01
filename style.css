@@ -1,463 +1,21 @@
 /* ==================================================
-   RILEY PRUE — PROFESSIONAL PORTFOLIO
-   Dark Default • Light Toggle • Responsive
-================================================== */
-
-
-/* ==================================================
-   RESET
-================================================== */
-
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-
-html {
-  scroll-behavior:smooth;
-}
-
-
-body {
-
-  font-family:"Inter", sans-serif;
-
-  min-height:100vh;
-
-  color:var(--text);
-
-  line-height:1.7;
-
-  -webkit-font-smoothing:antialiased;
-
-  overflow-x:hidden;
-
-}
-
-
-
-/* ==================================================
-   THEME VARIABLES
-================================================== */
-
-
-:root {
-
-
-  --bg:#0b1220;
-
-
-  --surface:
-  rgba(15,23,42,.72);
-
-
-  --surface-solid:
-  #111827;
-
-
-  --text:
-  #f8fafc;
-
-
-  --muted:
-  #cbd5e1;
-
-
-  --border:
-  rgba(255,255,255,.10);
-
-
-
-  --accent:
-  #60a5fa;
-
-
-  --accent-glow:
-  rgba(96,165,250,.35);
-
-
-
-  --shadow:
-  0 15px 40px rgba(0,0,0,.35);
-
-
-
-  --shadow-lg:
-  0 25px 60px rgba(0,0,0,.45);
-
-
-
-  --radius:
-  26px;
-
-}
-
-
-
-
-/* ==================================================
-   LIGHT MODE
-================================================== */
-
-
-body.light-mode {
-
-
-  --bg:#f8fafc;
-
-
-  --surface:
-  rgba(255,255,255,.75);
-
-
-  --surface-solid:
-  #ffffff;
-
-
-  --text:
-  #0f172a;
-
-
-  --muted:
-  #475569;
-
-
-  --border:
-  rgba(15,23,42,.10);
-
-
-
-  --accent:
-  #2563eb;
-
-
-
-  --accent-glow:
-  rgba(37,99,235,.25);
-
-
-  --shadow:
-
-  0 15px 40px rgba(15,23,42,.12);
-
-
-
-  --shadow-lg:
-
-  0 25px 60px rgba(15,23,42,.18);
-
-
-}
-
-
-
-/* ==================================================
-   ANIMATED BACKGROUND
-================================================== */
-
-
-body {
-
-
-background:
-
-radial-gradient(
-circle at 15% 20%,
-rgba(96,165,250,.22),
-transparent 35%
-),
-
-
-radial-gradient(
-circle at 85% 75%,
-rgba(59,130,246,.18),
-transparent 35%
-),
-
-
-linear-gradient(
-135deg,
-#0f172a,
-#1e293b
-);
-
-
-
-background-size:
-
-160% 160%,
-160% 160%,
-100% 100%;
-
-
-
-animation:
-backgroundMove 18s ease infinite;
-
-
-
-}
-
-
-
-body.light-mode {
-
-
-background:
-
-
-radial-gradient(
-circle at 20% 20%,
-rgba(37,99,235,.15),
-transparent 35%
-),
-
-
-radial-gradient(
-circle at 80% 80%,
-rgba(96,165,250,.12),
-transparent 35%
-),
-
-
-linear-gradient(
-135deg,
-#ffffff,
-#e2e8f0
-);
-
-
-
-}
-
-
-
-@keyframes backgroundMove {
-
-
-0% {
-
-background-position:
-0% 0%,
-100% 100%,
-center;
-
-}
-
-
-50% {
-
-background-position:
-100% 50%,
-0% 50%,
-center;
-
-}
-
-
-100% {
-
-background-position:
-0% 0%,
-100% 100%,
-center;
-
-}
-
-
-}
-
-
-
-
-
-/* ==================================================
-   GLOBAL SECTIONS
-================================================== */
-
-
-section {
-
-
-width:100%;
-
-
-padding:
-110px 20px;
-
-
-}
-
-
-
-.about,
-.timeline {
-
-
-max-width:1000px;
-
-
-margin:auto;
-
-
-}
-
-
-
-
-
-/* ==================================================
-   TERMINAL TITLES
-================================================== */
-
-
-.section-terminal {
-
-
-font-family:
-"JetBrains Mono",
-monospace;
-
-
-font-size:
-clamp(2.3rem,6vw,4rem);
-
-
-
-font-weight:700;
-
-
-letter-spacing:-.04em;
-
-
-text-align:center;
-
-
-color:var(--text);
-
-
-
-margin-bottom:45px;
-
-
-
-}
-
-
-
-.section-terminal::after {
-
-
-content:"_";
-
-
-color:var(--accent);
-
-
-animation:
-blink .9s infinite;
-
-
-}
-
-
-
-@keyframes blink {
-
-
-50% {
-
-opacity:0;
-
-}
-
-
-}
-
-
-
-.about h2,
-.timeline h2 {
-
-
-display:none;
-
-
-}
-
-
-
-
-
-/* ==================================================
-   TERMINAL BADGE
-================================================== */
-/* ==================================================
-   TERMINAL BADGE
-================================================== */
-
-.terminal {
-  display:inline-block;
-  font-family:"JetBrains Mono", monospace;
-  font-size:.85rem;
-  color:var(--accent);
-
-  background:rgba(96,165,250,.12);
-  border:1px solid var(--border);
-
-  padding:8px 16px;
-  border-radius:999px;
-
-  margin-bottom:25px;
-}
-
-/* Hero terminal matches about.me / experience */
-.hero-terminal {
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  background:rgba(96,165,250,.12);
-  border:1px solid var(--border);
-
-  padding:8px 16px;
-  border-radius:999px;
-
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
-  margin-bottom:18px;
-}
-
-.hero-terminal::after {
-  content:"_";
-  color:var(--accent);
-  margin-left:2px;
-  animation:blink .9s infinite;
-}
-
-
-
-/* ==================================================
-   HERO
+   HERO BANNER — FULLY CENTERED
 ================================================== */
 
 .hero {
   position: relative;
   min-height: 100vh;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* true page centering */
+  display: grid;
+  place-items: center;
 
-  text-align: center;
-
-  /* keep the hero flush with the top of the page */
-  padding: 0 20px;
-  padding-top: 100px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 
   overflow: hidden;
+  text-align: center;
   background: transparent;
 }
 
@@ -471,11 +29,9 @@ display:none;
       rgba(2,6,23,.55),
       rgba(2,6,23,.85)
     ),
-    url("assets/riley-hero.jpg")
-    center/cover no-repeat;
+    url("assets/riley-hero.jpg") center center / cover no-repeat;
 
-  z-index: -2;
-
+  z-index: -1;
   animation: heroZoom 18s ease infinite alternate;
 }
 
@@ -485,54 +41,7 @@ body.light-mode .hero::before {
       rgba(255,255,255,.35),
       rgba(255,255,255,.55)
     ),
-    url("assets/riley-hero.jpg")
-    center/cover no-repeat;
-}
-
-//* ==================================================
-   HERO
-================================================== */
-
-.hero {
-  position: relative;
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  /* remove the old top offset */
-  padding: 0 20px;
-
-  overflow: hidden;
-  background: transparent;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      rgba(2,6,23,.55),
-      rgba(2,6,23,.85)
-    ),
-    url("assets/riley-hero.jpg") center/cover no-repeat;
-
-  z-index: -2;
-  animation: heroZoom 18s ease infinite alternate;
-}
-
-body.light-mode .hero::before {
-  background:
-    linear-gradient(
-      rgba(255,255,255,.35),
-      rgba(255,255,255,.55)
-    ),
-    url("assets/riley-hero.jpg") center/cover no-repeat;
+    url("assets/riley-hero.jpg") center center / cover no-repeat;
 }
 
 /* --------------------
@@ -540,8 +49,9 @@ body.light-mode .hero::before {
 -------------------- */
 
 .hero-overlay {
-  width: 100%;
-  max-width: 850px;
+  position: relative;
+
+  width: min(100%, 900px);
 
   display: flex;
   flex-direction: column;
@@ -550,40 +60,36 @@ body.light-mode .hero::before {
 
   text-align: center;
 
-  /* force the whole block to be centered */
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0 20px;
 
   gap: 14px;
 }
 
 .hero-overlay > * {
-  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* --------------------
-   PROFILE PHOTO
+   PROFILE IMAGE
 -------------------- */
 
 .hero-image {
-  display: block !important;
+  display: block;
 
-  width: 165px;
-  height: 165px;
+  width: 170px;
+  height: 170px;
 
   object-fit: cover;
   object-position: center center;
 
   border-radius: 50%;
 
-  /* dead center */
-  margin: 0 auto 10px auto !important;
+  /* force perfect centering */
+  margin: 0 auto 12px auto;
 
-  position: relative;
-  left: 0;
-  right: 0;
-
-  border: 4px solid rgba(255,255,255,.12);
+  border: 4px solid rgba(255,255,255,.14);
 
   box-shadow:
     0 20px 50px rgba(0,0,0,.45),
@@ -597,17 +103,22 @@ body.light-mode .hero-image {
     0 18px 45px rgba(15,23,42,.18),
     0 0 0 6px rgba(255,255,255,.85);
 }
+
 /* --------------------
    NAME
 -------------------- */
 
 .hero h1 {
-  font-size: clamp(3.4rem, 9vw, 6.2rem);
-  font-weight: 800;
-  letter-spacing: -.05em;
-  line-height: .95;
+  margin: 0;
 
-  color: white;
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -.05em;
+
+  color: #fff;
+
+  text-align: center;
 
   text-shadow:
     0 10px 35px rgba(0,0,0,.55),
@@ -627,1240 +138,96 @@ body.light-mode .hero h1 {
 -------------------- */
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  margin: 8px auto 0;
+
+  max-width: 680px;
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+
   color: rgba(255,255,255,.92);
 
-  max-width: 650px;
-
-  margin: 8px auto 0;
+  text-align: center;
 }
 
 body.light-mode .hero-subtitle {
   color: #334155;
 }
 
-@keyframes heroZoom {
-  from {
-    transform: scale(1.05);
-  }
-
-  to {
-    transform: scale(1.15);
-  }
-}
-
-
-
 /* ==================================================
    HERO ACTIONS + LINKEDIN
 ================================================== */
 
 .hero-actions {
+  width: 100%;
 
-  display:flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  justify-content:center;
-
-  margin-top:30px;
-
+  margin-top: 30px;
 }
 
+.linkedin-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
+  width: 54px;
+  height: 54px;
 
+  border-radius: 50%;
+
+  border: 1px solid var(--border);
+
+  background: var(--surface);
+  color: var(--text);
+
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+
+  transition: .3s ease;
+}
 
 .linkedin-bubble:hover {
-
-  transform:
-  translateY(-5px)
-  scale(1.05);
-
-  box-shadow:var(--shadow-lg);
-
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-lg);
 }
-
-
 
 .linkedin-bubble svg {
-
-  width:23px;
-
-  height:23px;
-
+  width: 23px;
+  height: 23px;
 }
-
-
-
-/* Fixed top buttons */
-
-.linkedin-top {
-
-  position:fixed;
-
-  top:22px;
-
-  right:88px;
-
-  z-index:9999;
-
-}
-
-
-/* Dark Mode */
-
-body:not(.light-mode) .linkedin-bubble {
-
-  background:
-  rgba(15,23,42,.75);
-
-}
-
-
-
-/* Light Mode */
-
-body.light-mode .linkedin-bubble {
-
-  background:
-  rgba(255,255,255,.75);
-
-}
-
 
 /* ==================================================
-   ABOUT
+   TABLET / MOBILE HERO FIX
 ================================================== */
 
-
-.about {
-
-
-text-align:center;
-
-
-}
-
-
-
-.about-content {
-
-
-max-width:850px;
-
-
-margin:auto;
-
-
-}
-
-
-
-.about-text {
-
-
-max-width:850px;
-
-
-margin:
-0 auto 26px;
-
-
-
-font-size:1.05rem;
-
-
-line-height:1.85;
-
-
-
-color:var(--muted);
-
-
-
-}
-
-
-
-.about-text strong {
-
-
-color:var(--text);
-
-
-}
-
-
-
-
-
-/* ==================================================
-   SKILL + EXPERIENCE BUBBLES
-================================================== */
-
-
-.skills-bubbles,
-.experience-bubbles {
-
-
-display:flex;
-
-
-flex-wrap:wrap;
-
-
-justify-content:center;
-
-
-
-gap:10px;
-
-
-
-margin-top:35px;
-
-
-}
-
-
-
-.skills-bubbles span,
-.experience-bubbles span {
-
-
-
-display:inline-flex;
-
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-
-padding:
-8px 15px;
-
-
-
-border-radius:
-999px;
-
-
-
-background:
-var(--surface-solid);
-
-
-
-border:
-1px solid var(--border);
-
-
-
-color:
-var(--text);
-
-
-
-font-size:.85rem;
-
-
-
-font-weight:600;
-
-
-
-box-shadow:
-0 8px 20px rgba(0,0,0,.12);
-
-
-
-transition:.25s ease;
-
-
-
-}
-
-
-
-.skills-bubbles span:hover,
-.experience-bubbles span:hover {
-
-
-
-transform:
-translateY(-3px);
-
-
-
-box-shadow:
-var(--shadow);
-
-
-
-}
-
-
-
-
-
-
-/* ==================================================
-   EXPERIENCE
-================================================== */
-
-
-.timeline {
-
-
-text-align:center;
-
-
-}
-
-
-
-.timeline-item {
-
-
-background:
-var(--surface);
-
-
-
-border:
-1px solid var(--border);
-
-
-
-border-radius:
-var(--radius);
-
-
-
-padding:
-38px;
-
-
-
-margin-bottom:30px;
-
-
-
-text-align:left;
-
-
-
-backdrop-filter:
-blur(18px);
-
-
-
-box-shadow:
-var(--shadow);
-
-
-
-transition:
-.3s ease;
-
-
-
-}
-
-
-
-.timeline-item:hover {
-
-
-transform:
-translateY(-6px);
-
-
-
-box-shadow:
-var(--shadow-lg);
-
-
-
-}
-
-
-
-.timeline-item > span {
-
-
-display:inline-block;
-
-
-
-font-size:.9rem;
-
-
-
-font-weight:700;
-
-
-
-color:
-var(--accent);
-
-
-
-margin-bottom:20px;
-
-
-
-}
-
-
-
-
-
-.timeline-item p {
-
-
-color:
-var(--muted);
-
-
-
-font-size:1rem;
-
-
-
-line-height:1.85;
-
-
-
-margin-bottom:18px;
-
-
-
-}
-
-
-
-
-
-
-/* ==================================================
-   COMPANY HEADER
-================================================== */
-
-
-.company-header {
-
-
-display:flex;
-
-
-align-items:center;
-
-
-
-gap:18px;
-
-
-
-margin-bottom:22px;
-
-
-
-}
-
-
-
-.company-logo {
-
-
-width:62px;
-
-
-height:62px;
-
-
-
-object-fit:contain;
-
-
-
-background:white;
-
-
-
-border-radius:16px;
-
-
-
-padding:8px;
-
-
-
-border:
-1px solid rgba(0,0,0,.08);
-
-
-
-flex-shrink:0;
-
-
-
-}
-
-
-
-
-.company-header h3 {
-
-
-font-size:1.25rem;
-
-
-
-color:var(--text);
-
-
-
-margin-bottom:3px;
-
-
-
-}
-
-
-
-.company-header p {
-
-
-margin:0;
-
-
-}
-/* ==================================================
-   THEME BUTTON
-================================================== */
-
-.theme-toggle {
-
-  position:fixed;
-
-  top:22px;
-
-  right:22px;
-
-  z-index:9999;
-
-
-  width:54px;
-
-  height:54px;
-
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-
-  font-size:1.3rem;
-
-
-  border-radius:50%;
-
-
-  border:1px solid var(--border);
-
-
-  background:var(--surface);
-
-
-  color:var(--text);
-
-
-  backdrop-filter:blur(18px);
-
-
-  box-shadow:var(--shadow);
-
-
-  cursor:pointer;
-
-
-  transition:.3s ease;
-
-}
-
-
-
-.theme-toggle:hover {
-
-  transform:
-  translateY(-4px)
-  rotate(10deg);
-
-
-  box-shadow:var(--shadow-lg);
-
-}
-
-
-
-
-
-
-
-/* ==================================================
-   SCROLL REVEAL
-================================================== */
-
-
-.reveal {
-
-
-opacity:0;
-
-
-
-transform:
-translateY(30px);
-
-
-
-animation:
-reveal .8s ease forwards;
-
-
-
-}
-
-
-
-@keyframes reveal {
-
-
-to {
-
-
-opacity:1;
-
-
-transform:
-translateY(0);
-
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ==================================================
-   CONTACT / REACH OUT
-================================================== */
-
-
-.contact-section {
-
-  max-width:1000px;
-
-  margin:auto;
-
-  text-align:center;
-
-  padding-top:100px;
-
-  padding-bottom:80px;
-
-}
-
-
-
-.contact-section h2 {
-
-  font-family:
-  "JetBrains Mono",
-  monospace;
-
-  font-size:
-  clamp(2.3rem,6vw,4rem);
-
-  font-weight:700;
-
-  letter-spacing:-.04em;
-
-  color:var(--text);
-
-  margin-bottom:25px;
-
-}
-
-
-
-.contact-section h2::after {
-
-  content:"_";
-
-  color:var(--accent);
-
-  animation:
-  blink .9s infinite;
-
-}
-
-
-
-.contact-section p {
-
-  max-width:700px;
-
-  margin:0 auto 40px;
-
-  color:var(--muted);
-
-  font-size:1.05rem;
-
-  line-height:1.8;
-
-}
-
-
-
-
-.contact-buttons {
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-align-items:center;
-
-
-gap:15px;
-
-
-flex-wrap:wrap;
-
-
-}
-
-
-
-.contact-btn {
-
-
-display:inline-flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-gap:10px;
-
-
-
-padding:
-12px 26px;
-
-
-
-border-radius:
-999px;
-
-
-
-background:
-var(--surface-solid);
-
-
-
-border:
-1px solid var(--border);
-
-
-
-color:
-var(--text);
-
-
-
-font-weight:700;
-
-
-
-text-decoration:none;
-
-
-
-box-shadow:
-0 8px 20px rgba(0,0,0,.12);
-
-
-
-transition:
-.3s ease;
-
-
-
-}
-
-
-
-.contact-btn:hover {
-
-
-transform:
-translateY(-5px);
-
-
-
-background:
-var(--accent);
-
-
-
-color:white;
-
-
-
-box-shadow:
-var(--shadow);
-
-
-
-}
-
-
-
-
-
-/* ==================================================
-   FOOTER / COPYRIGHT
-================================================== */
-
-
-.site-footer {
-
-
-max-width:1000px;
-
-
-margin:auto;
-
-
-
-text-align:center;
-
-
-
-padding:
-35px 20px;
-
-
-
-border-top:
-1px solid var(--border);
-
-
-
-color:
-var(--muted);
-
-
-
-font-size:.85rem;
-
-
-
-line-height:1.7;
-
-
-
-}
-
-
-
-.site-footer p {
-
-
-margin:
-8px 0;
-
-
-
-}
-
-
-
-.site-footer strong {
-
-
-color:
-var(--text);
-
-
-
-}
-
-
-
-
-
-
-
-/* ==================================================
-   TABLET
-================================================== */
-
-
-@media(max-width:768px){
-
-
-
-section {
-
-
-padding:
-85px 18px;
-
-
-}
-
-
-
-.hero {
-
-
-padding:
-100px 18px;
-
-
-
-}
-
-
-
-.hero-image {
-
-
-width:120px;
-
-
-height:120px;
-
-
-
-}
-
-
-
-.hero h1 {
-
-
-font-size:
-clamp(2.8rem,12vw,4.5rem);
-
-
-
-}
-
-
-
-.hero-subtitle {
-
-
-font-size:1rem;
-
-
-}
-
-
-
-.timeline-item {
-
-
-padding:28px;
-
-
-
-}
-
-
-
-.about-text {
-
-
-font-size:1rem;
-
-
-
-}
-
-
-
-.contact-section {
-
-
-padding-top:80px;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media(max-width:480px){
-
-  .theme-toggle {
-
-    width:48px;
-
-    height:48px;
-
-    top:15px;
-
-    right:15px;
-
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 100svh;
+    padding: 0 18px;
   }
 
-
-  .linkedin-top {
-
-    width:48px;
-
-    height:48px;
-
-    top:15px;
-
-    right:71px;
-
+  .hero-overlay {
+    width: 100%;
+    padding: 0 12px;
+    gap: 12px;
   }
 
-
-  .linkedin-top svg {
-
-    width:20px;
-
-    height:20px;
-
-  }
-  .contact-section h2 {
-    font-size:2rem;
+  .hero-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px auto;
   }
 
-  /* rest of your mobile styles */
-}
-
-
-padding:
-70px 16px;
-
-
-
-}
-
-
-
-.section-terminal {
-
-
-font-size:2rem;
-
-
-
-margin-bottom:30px;
-
-
-
-}
-
-
-
-.hero-image {
-
-
-width:100px;
-
-
-height:100px;
-
-
-
-}
-
-
-
-.hero-subtitle {
-
-
-font-size:.95rem;
-
-
-
-}
-
-
-
-.skills-bubbles span,
-.experience-bubbles span {
-
-
-font-size:.78rem;
-
-
-
-padding:
-7px 12px;
-
-
-
-}
-
-
-
-.timeline-item {
-
-
-padding:22px;
-
-
-
-border-radius:20px;
-
-
-
-}
-
-
-
-.company-logo {
-
-
-width:52px;
-
-
-height:52px;
-
-
-
-}
-
-
-
-.company-header h3 {
-
-
-font-size:1.05rem;
-
-
-
-}
-
-
-
-.timeline-item p {
-
-
-font-size:.95rem;
-
-
-
-}
-
-
-
-.theme-toggle {
-
-
-width:48px;
-
-
-height:48px;
-
-
-
-top:15px;
-
-
-right:15px;
-
-
-
-}
-
-
-
-.contact-section h2 {
-
-
-font-size:2rem;
-
-
-}
-
-
-
-.contact-section p {
-
-
-font-size:.95rem;
-
-
-}
-
-
-
-.contact-btn {
-
-
-width:100%;
-
-
-max-width:300px;
-
-
-}
-
-
-
-.site-footer {
-
-
-font-size:.78rem;
-
-
-}
-
-
-
+  .hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4.6rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
 }
