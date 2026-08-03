@@ -1,4 +1,4 @@
-# style.css
+# style.css — Premium Glass Hero + Flowing Bubble Layout
 
 ```css
 /* ==================================================
@@ -195,12 +195,14 @@ body.light-mode .theme-toggle{
   align-items:center;
   justify-content:center;
 
+  text-align:center;
+
   padding:84px 16px 40px;
 
   overflow:hidden;
 }
 
-/* background image never changes between modes */
+/* IMAGE NEVER CHANGES BETWEEN MODES */
 
 .hero::before{
 
@@ -226,25 +228,26 @@ body.light-mode .theme-toggle{
 
   position:relative;
 
-  width:min(100%, 980px);
+  width:min(100%, 840px);
 
   display:flex;
+  flex-direction:column;
   align-items:center;
 
-  gap:32px;
+  gap:16px;
 
-  padding:34px 42px 34px 120px;
+  padding:28px clamp(20px, 5vw, 44px);
 
-  border-radius:34px;
+  border-radius:30px;
 
-  background:rgba(18,22,28,.42);
+  background:rgba(18,22,28,.34);
 
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.04);
 
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(8px);
 
   box-shadow:
-    0 14px 36px rgba(0,0,0,.22);
+    0 10px 28px rgba(0,0,0,.18);
 }
 
 .hero-overlay::before{
@@ -259,7 +262,7 @@ body.light-mode .theme-toggle{
   background:
     linear-gradient(
       180deg,
-      rgba(255,255,255,.05),
+      rgba(255,255,255,.06),
       rgba(255,255,255,.02)
     );
 
@@ -268,24 +271,17 @@ body.light-mode .theme-toggle{
 
 body.light-mode .hero-overlay{
 
-  background:rgba(255,255,255,.24);
+  background:rgba(255,255,255,.20);
 
-  border-color:rgba(255,255,255,.14);
+  border-color:rgba(255,255,255,.12);
 }
 
 /* ---------- PROFILE IMAGE ---------- */
 
 .hero-image{
 
-  position:absolute;
-
-  left:-72px;
-  top:50%;
-
-  transform:translateY(-50%);
-
-  width:164px;
-  height:164px;
+  width:156px;
+  height:156px;
 
   object-fit:cover;
   object-position:center;
@@ -295,25 +291,18 @@ body.light-mode .hero-overlay{
   border:none;
 
   box-shadow:
-    0 16px 34px rgba(0,0,0,.28);
+    0 12px 26px rgba(0,0,0,.22);
+
+  margin-bottom:-2px;
+}
+
+body.light-mode .hero-image{
+
+  box-shadow:
+    0 10px 22px rgba(15,23,42,.12);
 }
 
 /* ---------- HERO TEXT ---------- */
-
-.hero-overlay-content{
-
-  flex:1;
-
-  display:flex;
-  flex-direction:column;
-
-  align-items:center;
-  justify-content:center;
-
-  gap:12px;
-
-  text-align:center;
-}
 
 .hero h1{
 
@@ -333,7 +322,7 @@ body.light-mode .hero h1{
 
 .hero-subtitle{
 
-  max-width:720px;
+  max-width:700px;
 
   font-size:1rem;
   font-weight:500;
@@ -391,6 +380,8 @@ body.light-mode .hero-subtitle{
 
   backdrop-filter:blur(10px);
 }
+
+/* alternate section for better flow */
 
 .timeline{
   background:var(--surface-alt);
@@ -725,25 +716,16 @@ body.light-mode .experience-bubbles span{
 
   color:var(--text-muted);
 
-  font-size:.82rem;
-
-  line-height:1.6;
-
-  box-shadow:var(--shadow);
-}
-
-.site-footer p:first-child{
-
   font-size:.88rem;
 
-  font-weight:600;
+  box-shadow:var(--shadow);
 }
 
 .site-footer p{
 
   max-width:900px;
 
-  margin:0 auto 12px;
+  margin:0 auto 14px;
 }
 
 /* ==================================================
@@ -786,23 +768,15 @@ body.light-mode .experience-bubbles span{
 
     width:100%;
 
-    flex-direction:column;
+    padding:28px 18px;
 
-    gap:18px;
-
-    padding:28px 20px;
-
-    border-radius:24px;
+    border-radius:22px;
   }
 
   .hero-image{
 
-    position:static;
-
-    transform:none;
-
-    width:116px;
-    height:116px;
+    width:112px;
+    height:112px;
   }
 
   .hero h1{
