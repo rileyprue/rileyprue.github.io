@@ -682,16 +682,28 @@ body.light-mode .experience-bubbles span{
 
   color:var(--text-muted);
 
-  font-size:.88rem;
+  /* smaller overall footer text */
+  font-size:.82rem;
+
+  line-height:1.6;
 
   box-shadow:var(--shadow);
+}
+
+/* copyright line slightly more visible */
+
+.site-footer p:first-child{
+
+  font-size:.88rem;
+
+  font-weight:600;
 }
 
 .site-footer p{
 
   max-width:900px;
 
-  margin:0 auto 14px;
+  margin:0 auto 12px;
 }
 
 /* ==================================================
