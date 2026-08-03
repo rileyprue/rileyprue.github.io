@@ -1,9 +1,6 @@
-# style.css — Premium Glass Hero + Flowing Bubble Layout
-
-```css
 /* ==================================================
-   RILEY PRUE — PREMIUM TORONTO PORTFOLIO
-   Glass Hero • Gray Gradient • Fully Responsive
+   RILEY PRUE — PREMIUM GRAY GRADIENT PORTFOLIO
+   Modern • Toronto Inspired • Fully Responsive
 ================================================== */
 
 /* ==================================================
@@ -46,6 +43,7 @@
 
 /* ==================================================
    LIGHT MODE
+   ONLY CHANGES TEXT + CARDS
 ================================================== */
 
 body.light-mode{
@@ -99,6 +97,7 @@ body{
   font-family:"Inter",sans-serif;
 
   background:var(--bg);
+
   color:var(--text);
 
   line-height:1.65;
@@ -159,6 +158,7 @@ body{
   color:#fff;
 
   font-size:1rem;
+
   cursor:pointer;
 
   backdrop-filter:blur(12px);
@@ -197,7 +197,7 @@ body.light-mode .theme-toggle{
 
   text-align:center;
 
-  padding:84px 16px 40px;
+  padding:88px 16px 48px;
 
   overflow:hidden;
 }
@@ -222,11 +222,7 @@ body.light-mode .theme-toggle{
   z-index:-1;
 }
 
-/* ---------- GLASS HERO CARD ---------- */
-
 .hero-overlay{
-
-  position:relative;
 
   width:min(100%, 840px);
 
@@ -236,73 +232,43 @@ body.light-mode .theme-toggle{
 
   gap:16px;
 
-  padding:28px clamp(20px, 5vw, 44px);
+  padding:36px clamp(20px, 5vw, 52px);
 
   border-radius:30px;
 
-  background:rgba(18,22,28,.34);
+  background:rgba(18,22,28,.72);
 
-  border:1px solid rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
 
-  backdrop-filter:blur(8px);
+  backdrop-filter:blur(18px);
 
-  box-shadow:
-    0 10px 28px rgba(0,0,0,.18);
+  box-shadow:var(--shadow-lg);
 }
 
-.hero-overlay::before{
-
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  border-radius:inherit;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.06),
-      rgba(255,255,255,.02)
-    );
-
-  pointer-events:none;
-}
+/* light mode keeps same image, only overlay changes */
 
 body.light-mode .hero-overlay{
 
-  background:rgba(255,255,255,.20);
+  background:rgba(255,255,255,.82);
 
-  border-color:rgba(255,255,255,.12);
+  border-color:rgba(15,23,42,.06);
 }
-
-/* ---------- PROFILE IMAGE ---------- */
 
 .hero-image{
 
-  width:156px;
-  height:156px;
+  width:148px;
+  height:148px;
 
   object-fit:cover;
   object-position:center;
 
-  border-radius:26px;
+  border-radius:22px;
 
-  border:none;
-
-  box-shadow:
-    0 12px 26px rgba(0,0,0,.22);
-
-  margin-bottom:-2px;
-}
-
-body.light-mode .hero-image{
+  border:3px solid rgba(255,255,255,.12);
 
   box-shadow:
-    0 10px 22px rgba(15,23,42,.12);
+    0 12px 32px rgba(0,0,0,.26);
 }
-
-/* ---------- HERO TEXT ---------- */
 
 .hero h1{
 
@@ -358,7 +324,7 @@ body.light-mode .hero-subtitle{
 }
 
 /* ==================================================
-   PREMIUM GRADIENT SECTIONS
+   PREMIUM BUBBLE SECTIONS
 ================================================== */
 
 .about,
@@ -381,7 +347,7 @@ body.light-mode .hero-subtitle{
   backdrop-filter:blur(10px);
 }
 
-/* alternate section for better flow */
+/* alternate section for flow */
 
 .timeline{
   background:var(--surface-alt);
@@ -820,4 +786,3 @@ body.light-mode .experience-bubbles span{
     max-width:100%;
   }
 }
-```
