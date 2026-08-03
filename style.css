@@ -1,9 +1,6 @@
-# style.css — Complete Responsive Premium Bubble Layout
-
-```css
 /* ==================================================
-   RILEY PRUE — PREMIUM RESPONSIVE PORTFOLIO
-   Toronto Inspired • Modern • Centered • Mobile Safe
+   RILEY PRUE — PREMIUM GRAY GRADIENT PORTFOLIO
+   Modern • Toronto Inspired • Fully Responsive
 ================================================== */
 
 /* ==================================================
@@ -12,50 +9,73 @@
 
 :root{
 
-  --bg:#0b0f14;
-  --surface:#121821;
-  --surface-elevated:rgba(18,24,33,.92);
+  --bg:#0a0d12;
 
-  --text:#f3f4f6;
-  --text-muted:#9ca3af;
+  --surface:
+    linear-gradient(
+      180deg,
+      rgba(28,32,38,.96),
+      rgba(17,21,27,.96)
+    );
 
-  --accent:#64748b;
-  --accent-dark:#475569;
+  --surface-alt:
+    linear-gradient(
+      180deg,
+      rgba(34,39,46,.96),
+      rgba(20,24,30,.96)
+    );
 
-  --border:rgba(255,255,255,.06);
+  --text:#f4f6f8;
+  --text-muted:#a0a8b3;
+
+  --accent:#8a94a3;
+
+  --border:rgba(255,255,255,.07);
 
   --shadow:
-    0 8px 24px rgba(0,0,0,.22);
+    0 10px 30px rgba(0,0,0,.28);
 
   --shadow-lg:
-    0 18px 42px rgba(0,0,0,.30);
+    0 18px 50px rgba(0,0,0,.38);
 
   --radius:24px;
 }
 
 /* ==================================================
    LIGHT MODE
+   ONLY CHANGES TEXT + CARDS
 ================================================== */
 
 body.light-mode{
 
-  --bg:#f5f7fa;
-  --surface:#ffffff;
-  --surface-elevated:rgba(255,255,255,.96);
+  --bg:#eef2f5;
+
+  --surface:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.96),
+      rgba(244,247,250,.96)
+    );
+
+  --surface-alt:
+    linear-gradient(
+      180deg,
+      rgba(250,252,253,.96),
+      rgba(240,244,248,.96)
+    );
 
   --text:#111827;
-  --text-muted:#4b5563;
+  --text-muted:#475569;
 
-  --accent:#475569;
-  --accent-dark:#334155;
+  --accent:#5b6472;
 
-  --border:rgba(17,24,39,.08);
+  --border:rgba(15,23,42,.08);
 
   --shadow:
-    0 6px 18px rgba(15,23,42,.06);
+    0 8px 24px rgba(15,23,42,.06);
 
   --shadow-lg:
-    0 14px 34px rgba(15,23,42,.10);
+    0 16px 40px rgba(15,23,42,.10);
 }
 
 /* ==================================================
@@ -77,6 +97,7 @@ body{
   font-family:"Inter",sans-serif;
 
   background:var(--bg);
+
   color:var(--text);
 
   line-height:1.65;
@@ -92,25 +113,7 @@ body{
 }
 
 /* ==================================================
-   GLOBAL CONTAINER
-================================================== */
-
-section,
-header,
-footer{
-  width:100%;
-}
-
-.about,
-.timeline,
-.contact-section,
-.site-footer{
-  width:min(1100px, calc(100% - 32px));
-  margin-inline:auto;
-}
-
-/* ==================================================
-   SCROLL PROGRESS
+   SCROLL BAR
 ================================================== */
 
 .scroll-progress{
@@ -125,8 +128,8 @@ footer{
   background:
     linear-gradient(
       90deg,
-      #94a3b8,
-      #64748b
+      #b4bcc7,
+      #6b7280
     );
 
   z-index:9999;
@@ -144,32 +147,38 @@ footer{
 
   z-index:9999;
 
-  width:50px;
-  height:50px;
+  width:48px;
+  height:48px;
 
   border:none;
   border-radius:50%;
 
-  background:var(--surface-elevated);
-  color:var(--text);
+  background:rgba(22,26,33,.86);
+
+  color:#fff;
 
   font-size:1rem;
+
   cursor:pointer;
 
-  backdrop-filter:blur(16px);
+  backdrop-filter:blur(12px);
 
   box-shadow:var(--shadow);
 
   transition:
     transform .2s ease,
-    box-shadow .2s ease;
+    background .2s ease;
 }
 
 .theme-toggle:hover{
-
   transform:translateY(-2px);
+}
 
-  box-shadow:var(--shadow-lg);
+body.light-mode .theme-toggle{
+
+  background:rgba(255,255,255,.92);
+
+  color:#111827;
 }
 
 /* ==================================================
@@ -180,7 +189,7 @@ footer{
 
   position:relative;
 
-  min-height:82vh;
+  min-height:86vh;
 
   display:flex;
   align-items:center;
@@ -193,6 +202,8 @@ footer{
   overflow:hidden;
 }
 
+/* IMAGE NEVER CHANGES BETWEEN MODES */
+
 .hero::before{
 
   content:"";
@@ -203,78 +214,65 @@ footer{
   background:
     linear-gradient(
       180deg,
-      rgba(11,15,20,.56),
-      rgba(11,15,20,.84)
+      rgba(10,13,18,.52),
+      rgba(10,13,18,.78)
     ),
     url("assets/riley-hero.jpg") center/cover no-repeat;
 
   z-index:-1;
 }
 
-body.light-mode .hero::before{
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.38),
-      rgba(255,255,255,.72)
-    ),
-    url("assets/riley-hero.jpg") center/cover no-repeat;
-}
-
 .hero-overlay{
 
-  width:min(100%, 820px);
+  width:min(100%, 840px);
 
   display:flex;
   flex-direction:column;
   align-items:center;
 
-  gap:14px;
-
-  background:rgba(18,24,33,.74);
-
-  border:1px solid rgba(255,255,255,.08);
-
-  border-radius:28px;
+  gap:16px;
 
   padding:36px clamp(20px, 5vw, 52px);
+
+  border-radius:30px;
+
+  background:rgba(18,22,28,.72);
+
+  border:1px solid rgba(255,255,255,.08);
 
   backdrop-filter:blur(18px);
 
   box-shadow:var(--shadow-lg);
 }
 
+/* light mode keeps same image, only overlay changes */
+
 body.light-mode .hero-overlay{
 
-  background:rgba(255,255,255,.84);
+  background:rgba(255,255,255,.82);
 
   border-color:rgba(15,23,42,.06);
 }
 
 .hero-image{
 
-  width:144px;
-  height:144px;
+  width:148px;
+  height:148px;
 
   object-fit:cover;
   object-position:center;
 
-  border-radius:24px;
+  border-radius:22px;
 
-  border:3px solid rgba(255,255,255,.10);
+  border:3px solid rgba(255,255,255,.12);
 
   box-shadow:
-    0 12px 30px rgba(0,0,0,.25);
-}
-
-body.light-mode .hero-image{
-  border-color:rgba(15,23,42,.06);
+    0 12px 32px rgba(0,0,0,.26);
 }
 
 .hero h1{
 
-  font-size:clamp(3rem, 8vw, 5.4rem);
+  font-size:clamp(3rem, 8vw, 5.6rem);
 
   font-weight:800;
 
@@ -290,11 +288,11 @@ body.light-mode .hero h1{
 
 .hero-subtitle{
 
-  max-width:680px;
+  max-width:700px;
 
   font-size:1rem;
   font-weight:500;
-  line-height:1.75;
+  line-height:1.8;
 
   color:rgba(255,255,255,.86);
 }
@@ -303,9 +301,7 @@ body.light-mode .hero-subtitle{
   color:#475569;
 }
 
-/* ==================================================
-   REMOVE TERMINAL LOOK
-================================================== */
+/* REMOVE TERMINAL STYLE */
 
 .terminal,
 .hero-terminal,
@@ -314,34 +310,58 @@ body.light-mode .hero-subtitle{
 }
 
 /* ==================================================
-   SECTION BUBBLES
+   SECTION CONTAINER
+================================================== */
+
+.about,
+.timeline,
+.contact-section,
+.site-footer{
+
+  width:min(1120px, calc(100% - 24px));
+
+  margin-inline:auto;
+}
+
+/* ==================================================
+   PREMIUM BUBBLE SECTIONS
 ================================================== */
 
 .about,
 .timeline,
 .contact-section{
 
-  background:var(--surface-elevated);
+  background:var(--surface);
 
   border:1px solid var(--border);
 
-  border-radius:26px;
+  border-radius:28px;
 
-  padding:48px clamp(20px, 4vw, 48px);
+  padding:52px clamp(22px, 4vw, 54px);
 
   margin-top:28px;
   margin-bottom:28px;
 
   box-shadow:var(--shadow);
 
-  backdrop-filter:blur(12px);
+  backdrop-filter:blur(10px);
 }
+
+/* alternate section for flow */
+
+.timeline{
+  background:var(--surface-alt);
+}
+
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
 
 .about h2,
 .timeline h2,
 .contact-section h2{
 
-  font-size:clamp(2rem, 4vw, 2.7rem);
+  font-size:clamp(2rem, 4vw, 2.8rem);
 
   font-weight:800;
 
@@ -380,18 +400,18 @@ body.light-mode .hero-subtitle{
 
   gap:10px;
 
-  margin-top:26px;
+  margin-top:28px;
 }
 
 .skills-bubbles span{
 
-  padding:10px 15px;
+  padding:10px 16px;
 
   border-radius:999px;
 
-  background:rgba(148,163,184,.10);
+  background:rgba(255,255,255,.04);
 
-  border:1px solid rgba(148,163,184,.14);
+  border:1px solid rgba(255,255,255,.08);
 
   color:var(--text);
 
@@ -400,21 +420,25 @@ body.light-mode .hero-subtitle{
 
   transition:
     transform .2s ease,
-    background .2s ease,
-    border-color .2s ease;
+    background .2s ease;
+}
+
+body.light-mode .skills-bubbles span{
+
+  background:rgba(15,23,42,.04);
+
+  border-color:rgba(15,23,42,.08);
 }
 
 .skills-bubbles span:hover{
 
   transform:translateY(-2px);
 
-  background:rgba(148,163,184,.16);
-
-  border-color:rgba(148,163,184,.22);
+  background:rgba(255,255,255,.08);
 }
 
 /* ==================================================
-   TIMELINE
+   EXPERIENCE CARDS
 ================================================== */
 
 .timeline{
@@ -427,9 +451,9 @@ body.light-mode .hero-subtitle{
 
 .timeline-item{
 
-  max-width:900px;
+  max-width:920px;
 
-  margin:0 auto 22px;
+  margin:0 auto 24px;
 
   padding:24px;
 
@@ -437,9 +461,9 @@ body.light-mode .hero-subtitle{
 
   border-radius:22px;
 
-  background:var(--surface);
+  background:rgba(255,255,255,.04);
 
-  border:1px solid var(--border);
+  border:1px solid rgba(255,255,255,.06);
 
   box-shadow:var(--shadow);
 
@@ -449,13 +473,20 @@ body.light-mode .hero-subtitle{
     border-color .25s ease;
 }
 
+body.light-mode .timeline-item{
+
+  background:rgba(255,255,255,.72);
+
+  border-color:rgba(15,23,42,.06);
+}
+
 .timeline-item:hover{
 
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 
   box-shadow:var(--shadow-lg);
 
-  border-color:rgba(148,163,184,.18);
+  border-color:rgba(255,255,255,.12);
 }
 
 .timeline-item::before{
@@ -541,12 +572,19 @@ body.light-mode .hero-subtitle{
 
   border-radius:999px;
 
-  background:rgba(148,163,184,.08);
+  background:rgba(255,255,255,.05);
 
-  border:1px solid rgba(148,163,184,.12);
+  border:1px solid rgba(255,255,255,.08);
 
   font-size:.84rem;
   font-weight:600;
+}
+
+body.light-mode .experience-bubbles span{
+
+  background:rgba(15,23,42,.04);
+
+  border-color:rgba(15,23,42,.08);
 }
 
 /* ==================================================
@@ -561,7 +599,7 @@ body.light-mode .hero-subtitle{
 
   max-width:700px;
 
-  margin:0 auto 24px;
+  margin:0 auto 26px;
 
   color:var(--text-muted);
 
@@ -574,7 +612,7 @@ body.light-mode .hero-subtitle{
   justify-content:center;
   flex-wrap:wrap;
 
-  gap:12px;
+  gap:14px;
 }
 
 .contact-btn{
@@ -585,7 +623,7 @@ body.light-mode .hero-subtitle{
 
   gap:10px;
 
-  min-width:160px;
+  min-width:170px;
 
   padding:12px 18px;
 
@@ -594,8 +632,8 @@ body.light-mode .hero-subtitle{
   background:
     linear-gradient(
       135deg,
-      #334155,
-      #1e293b
+      #4b5563,
+      #374151
     );
 
   color:#fff;
@@ -605,19 +643,22 @@ body.light-mode .hero-subtitle{
   font-weight:700;
 
   box-shadow:
-    0 8px 20px rgba(15,23,42,.18);
+    0 10px 24px rgba(0,0,0,.18);
 
   transition:
     transform .2s ease,
-    box-shadow .2s ease;
+    box-shadow .2s ease,
+    filter .2s ease;
 }
 
 .contact-btn:hover{
 
   transform:translateY(-2px);
 
+  filter:brightness(1.05);
+
   box-shadow:
-    0 12px 26px rgba(15,23,42,.24);
+    0 14px 30px rgba(0,0,0,.24);
 }
 
 /* ==================================================
@@ -626,7 +667,7 @@ body.light-mode .hero-subtitle{
 
 .site-footer{
 
-  background:var(--surface-elevated);
+  background:var(--surface);
 
   border:1px solid var(--border);
 
@@ -634,8 +675,8 @@ body.light-mode .hero-subtitle{
 
   padding:36px 24px;
 
-  margin-top:24px;
-  margin-bottom:32px;
+  margin-top:28px;
+  margin-bottom:36px;
 
   text-align:center;
 
@@ -684,9 +725,9 @@ body.light-mode .hero-subtitle{
 
   .hero{
 
-    min-height:72vh;
+    min-height:74vh;
 
-    padding:72px 12px 36px;
+    padding:72px 12px 34px;
   }
 
   .hero-overlay{
@@ -745,21 +786,3 @@ body.light-mode .hero-subtitle{
     max-width:100%;
   }
 }
-
-/* ==================================================
-   LARGE SCREEN POLISH
-================================================== */
-
-@media (min-width:1200px){
-
-  .about,
-  .timeline,
-  .contact-section{
-    padding:56px 56px;
-  }
-
-  .hero-overlay{
-    max-width:840px;
-  }
-}
-```
