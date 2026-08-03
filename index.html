@@ -1,19 +1,30 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- ==================================================
+     1. DOCUMENT HEAD
+================================================== -->
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Riley Prue</title>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
 
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Structured data for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,72 +35,150 @@
     "jobTitle": "Junior Fire Alarm Technician",
     "description": "Riley Prue is an aspiring skilled trades professional from Ontario, Canada with experience in fire protection, customer service, and automotive detailing.",
     "sameAs": [
-      "YOUR LINKEDIN URL",
-      "YOUR GITHUB URL"
+      "https://www.linkedin.com/in/your-linkedin/"
     ]
   }
   </script>
+
 </head>
 
+
+
 <body>
+
+  <!-- ==================================================
+       2. SCROLL PROGRESS BAR
+  ================================================== -->
 
   <div class="scroll-progress"></div>
 
 
-<!-- THEME BUTTON -->
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-  ☀️
-</button>
 
-  <!-- HERO -->
-  <header class="hero reveal">
+  <!-- ==================================================
+       3. SITE HEADER / NAVIGATION
+  ================================================== -->
 
-    <img 
-      src="assets/riley-profile.png" 
-      alt="Riley Prue" 
-      class="hero-image"
-    >
+  <header class="site-header">
 
-    <div class="hero-overlay">
+    <div class="nav-container">
 
-      <p class="terminal hero-terminal">
-  > riley.prue
-</p>
+      <a href="#home" class="logo">
+        Riley Prue
+      </a>
 
-      <h1>Riley Prue</h1>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <p class="hero-subtitle">
-        Skilled Trades • Technology • Fire Protection • Future Electrician
-      </p>
-
-      
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle theme"
+      >
+        ☀️
+      </button>
 
     </div>
 
   </header>
 
-  <!-- ABOUT -->
-  <section class="about reveal" id="about">
 
-    <p class="terminal section-terminal"
-       data-text="> about.me"></p>
+
+  <!-- ==================================================
+       4. HERO SECTION
+       Left-aligned glass card over background image
+  ================================================== -->
+
+  <section id="home" class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-card reveal">
+
+        <img
+          src="assets/riley-profile.png"
+          alt="Riley Prue"
+          class="hero-image"
+        >
+
+        <p class="hero-tag">
+          Junior Fire Alarm Technician
+        </p>
+
+        <h1>Riley Prue</h1>
+
+        <p class="hero-subtitle">
+          Skilled Trades • Technology • Fire Protection • Future Electrician
+        </p>
+
+        <p class="hero-description">
+          Building hands-on experience in fire alarm systems, electrical work,
+          and modern building technology while continuing to develop a strong
+          career in the skilled trades industry.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#experience" class="hero-btn primary">
+            View Experience
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/your-linkedin/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-btn secondary"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       5. ABOUT SECTION
+  ================================================== -->
+
+  <section class="about reveal" id="about">
 
     <h2>About Me</h2>
 
     <p class="about-text">
-      Hi, I’m <strong>Riley Prue</strong>, an aspiring trades professional from Ontario, Canada with an interest in <strong>electrical work, technology, and hands-on problem solving</strong>.
+      Hi, I’m <strong>Riley Prue</strong>, an aspiring trades professional
+      from Ontario, Canada with an interest in
+      <strong>electrical work, technology, and hands-on problem solving</strong>.
     </p>
 
     <p class="about-text">
-      I’m currently building experience in the <strong>fire protection and life safety industry</strong>, where I assist with the inspection, servicing, and support of fire alarm systems. This has given me practical experience with electrical systems, workplace safety, teamwork, and technical troubleshooting.
+      I’m currently building experience in the
+      <strong>fire protection and life safety industry</strong>, where I assist
+      with the inspection, servicing, and support of fire alarm systems. This has
+      given me practical experience with electrical systems, workplace safety,
+      teamwork, and technical troubleshooting.
     </p>
 
     <p class="about-text">
-      I’ve also gained experience in <strong>retail customer service</strong> and <strong>automotive detailing</strong>, which have helped me develop strong communication skills, attention to detail, reliability, and a professional work ethic.
+      I’ve also gained experience in
+      <strong>retail customer service</strong> and
+      <strong>automotive detailing</strong>, which have helped me develop
+      strong communication skills, attention to detail, reliability, and a
+      professional work ethic.
     </p>
 
     <p class="about-text">
-      I take pride in being organized, dependable, respectful, and always willing to learn. My goal is to continue developing my technical skills while gaining valuable experience in the skilled trades.
+      I take pride in being organized, dependable, respectful, and always willing
+      to learn. My goal is to continue developing my technical skills while
+      gaining valuable experience in the skilled trades.
     </p>
 
     <div class="skills-bubbles">
@@ -109,21 +198,24 @@
 
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="timeline reveal" id="experience">
 
-    <p class="terminal section-terminal"
-       data-text="> experience"></p>
+
+  <!-- ==================================================
+       6. EXPERIENCE SECTION
+  ================================================== -->
+
+  <section class="timeline reveal" id="experience">
 
     <h2>Experience</h2>
 
+    <!-- Fire Alarm Technician -->
     <div class="timeline-item">
 
       <span>April 2026 — Present</span>
 
       <div class="company-header">
 
-        <img 
+        <img
           src="assets/oakridge-logo.png"
           class="company-logo"
           alt="Fire Protection Industry"
@@ -137,7 +229,12 @@
       </div>
 
       <p>
-        Supporting the inspection, testing, servicing, installation, and troubleshooting of fire alarm and life safety systems while working alongside experienced technicians. This role has provided valuable hands-on experience with <strong>electrical systems, safety procedures, technical diagnostics, and professional teamwork</strong> in a variety of commercial and residential environments.
+        Supporting the inspection, testing, servicing, installation, and
+        troubleshooting of fire alarm and life safety systems while working
+        alongside experienced technicians. This role has provided valuable
+        hands-on experience with <strong>electrical systems, safety procedures,
+        technical diagnostics, and professional teamwork</strong> in a variety
+        of commercial and residential environments.
       </p>
 
       <div class="experience-bubbles">
@@ -149,13 +246,15 @@
 
     </div>
 
+
+    <!-- Home Hardware -->
     <div class="timeline-item">
 
       <span>January 2025 — Present</span>
 
       <div class="company-header">
 
-        <img 
+        <img
           src="assets/home-hardware-logo.png"
           class="company-logo"
           alt="Home Hardware Building Centre"
@@ -169,18 +268,24 @@
       </div>
 
       <p>
-        Providing customer support for building materials and hardware products while assisting with <strong>sales transactions, inventory organization, restocking, product preparation, and general building centre operations</strong>. The role has strengthened my customer service, communication, and time management skills.
+        Providing customer support for building materials and hardware products
+        while assisting with <strong>sales transactions, inventory organization,
+        restocking, product preparation, and general building centre operations</strong>.
+        The role has strengthened my customer service, communication, and time
+        management skills.
       </p>
 
     </div>
 
+
+    <!-- Splash & Wax -->
     <div class="timeline-item">
 
       <span>June 2022 — September 2024</span>
 
       <div class="company-header">
 
-        <img 
+        <img
           src="assets/splash-wax-logo.png"
           class="company-logo"
           alt="Splash & Wax Mobile Detailing"
@@ -194,31 +299,45 @@
       </div>
 
       <p>
-        Performed professional <strong>interior and exterior vehicle detailing</strong>, maintained equipment and supplies, managed appointments, and delivered high-quality results with a strong focus on <strong>customer satisfaction and attention to detail</strong>.
+        Performed professional <strong>interior and exterior vehicle detailing</strong>,
+        maintained equipment and supplies, managed appointments, and delivered
+        high-quality results with a strong focus on
+        <strong>customer satisfaction and attention to detail</strong>.
       </p>
 
     </div>
 
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact-section">
+
+
+  <!-- ==================================================
+       7. CONTACT SECTION
+  ================================================== -->
+
+  <section id="contact" class="contact-section reveal">
 
     <h2>Reach Out</h2>
 
     <p>
-      I’m always open to <strong>professional connections, learning opportunities, collaborations, and future career opportunities</strong>. Whether you’d like to connect, discuss a project, or simply start a conversation, feel free to reach out by email or LinkedIn.
+      I’m always open to <strong>professional connections, learning opportunities,
+      collaborations, and future career opportunities</strong>. Whether you’d
+      like to connect, discuss a project, or simply start a conversation, feel
+      free to reach out by email or LinkedIn.
     </p>
 
     <div class="contact-buttons">
 
-      <a href="mailto:your-email@example.com" class="contact-btn">
+      <a href="mailto:riley@prue.cc" class="contact-btn">
         ✉️ Email Me
       </a>
 
-      <a href="https://www.linkedin.com/in/your-linkedin/" 
-         target="_blank" 
-         class="contact-btn">
+      <a
+        href="https://www.linkedin.com/in/your-linkedin/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-btn"
+      >
         💼 LinkedIn
       </a>
 
@@ -226,34 +345,42 @@
 
   </section>
 
-  <!-- FOOTER -->
+
+
+  <!-- ==================================================
+       8. FOOTER
+  ================================================== -->
+
   <footer class="site-footer">
 
     <p>© 2026 Riley Prue. All rights reserved.</p>
 
     <p>
-      All company names, trademarks, logos, and brand assets displayed on this website
-      are the property of their respective owners and are used for identification and
-      professional portfolio purposes only.
+      All company names, trademarks, logos, and brand assets displayed on this
+      website are the property of their respective owners and are used for
+      identification and professional portfolio purposes only.
     </p>
 
     <p>
-      Personal content, photography, designs, and original work displayed on this website
-      remain the property of Riley Prue unless otherwise stated.
+      Personal content, photography, designs, and original work displayed on
+      this website remain the property of Riley Prue unless otherwise stated.
     </p>
 
   </footer>
 
-  <script>
 
-    /* ==========================
-       DARK MODE TOGGLE
-       DARK DEFAULT
-    ========================== */
+
+  <!-- ==================================================
+       9. JAVASCRIPT
+       Dark / Light Mode Toggle
+  ================================================== -->
+
+  <script>
 
     const toggle = document.getElementById("themeToggle");
     const body = document.body;
 
+    /* Start in dark mode */
     body.classList.remove("light-mode");
     toggle.textContent = "☀️";
 
@@ -261,93 +388,9 @@
 
       body.classList.toggle("light-mode");
 
-      if (body.classList.contains("light-mode")) {
-        toggle.textContent = "🌙";
-      } else {
-        toggle.textContent = "☀️";
-      }
-
-    });
-
-    /* ==========================
-       TERMINAL TYPE EFFECT
-    ========================== */
-
-    const terminals = document.querySelectorAll(".section-terminal");
-
-    let typingQueue = [];
-    let isTyping = false;
-
-    function typeTerminal(element) {
-
-      return new Promise(resolve => {
-
-        const text = element.dataset.text;
-
-        element.textContent = "";
-        element.classList.add("typing");
-
-        let index = 0;
-
-        const interval = setInterval(() => {
-
-          element.textContent += text[index];
-          index++;
-
-          if(index >= text.length){
-
-            clearInterval(interval);
-            resolve();
-
-          }
-
-        },70);
-
-      });
-
-    }
-
-    async function runTypingQueue(){
-
-      if(isTyping) return;
-
-      isTyping = true;
-
-      for(const item of typingQueue){
-
-        await typeTerminal(item);
-
-      }
-
-      typingQueue = [];
-      isTyping = false;
-
-    }
-
-    const observer = new IntersectionObserver((entries)=>{
-
-      entries.forEach(entry=>{
-
-        if(entry.isIntersecting && !entry.target.dataset.typed){
-
-          entry.target.dataset.typed = "true";
-          typingQueue.push(entry.target);
-
-          runTypingQueue();
-
-        }
-
-      });
-
-    },{
-
-      threshold:0.5
-
-    });
-
-    terminals.forEach(terminal=>{
-
-      observer.observe(terminal);
+      toggle.textContent = body.classList.contains("light-mode")
+        ? "🌙"
+        : "☀️";
 
     });
 
@@ -355,3 +398,4 @@
 
 </body>
 </html>
+```
