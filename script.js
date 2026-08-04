@@ -1,27 +1,21 @@
-// Theme toggle
-const toggle = document.querySelector('.theme-toggle');
+const observer = new IntersectionObserver((entries)=>{
 
-// Dark mode is default
-document.body.classList.remove('light-mode');
+entries.forEach(entry=>{
 
-// Show sun because clicking it will enable light mode
-toggle.innerHTML = '☀️';
+if(entry.isIntersecting){
 
-toggle.addEventListener('click', () => {
+entry.target.classList.add("show");
 
-  document.body.classList.toggle('light-mode');
+}
 
-  // Update icon
-  if (document.body.classList.contains('light-mode')) {
+});
 
-    // Light mode is active, show moon to go back dark
-    toggle.innerHTML = '🌙';
+});
 
-  } else {
+document.querySelectorAll("section").forEach(section=>{
 
-    // Dark mode is active, show sun to go light
-    toggle.innerHTML = '☀️';
+section.classList.add("hidden");
 
-  }
+observer.observe(section);
 
 });
