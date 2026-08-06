@@ -1,263 +1,317 @@
+## Updated `index.html`
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Riley Prue | Portfolio</title>
+  <title>Riley Prue | Portfolio</title>
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
 
-<header>
+  <header>
 
-<div class="logo">
-RP
-</div>
+    <div class="logo">RP</div>
 
-<nav>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#interests">Interests</a>
+      <a href="#experience">Experience</a>
+      <a href="#goals">Goals</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-<a href="#interests">Interests</a>
-<a href="#experience">Experience</a>
-<a href="#goals">Goals</a>
-<a href="#contact">Contact</a>
+  </header>
 
-</nav>
+  <section class="hero">
 
-</header>
+    <div class="hero-content">
 
-<section class="hero">
+      <h1>Hello, I'm <span>Riley Prue</span></h1>
 
-<div class="hero-text">
+      <p>
+        Junior Fire Alarm Technician • Aspiring Electrician • Tech Enthusiast
+      </p>
 
-<h1>Hello, I'm <span>Riley Prue</span></h1>
+      <div class="hero-buttons">
 
-<p>Junior Fire Alarm Technician • Aspiring Electrician • Tech Enthusiast</p>
+        <a href="#about" class="gold-btn">
+          Explore
+        </a>
 
-<div class="hero-buttons">
+        <a
+          href="https://linkedin.com/in/rileyprue"
+          target="_blank"
+          class="outline-btn"
+        >
+          LinkedIn
+        </a>
 
-<a href="#about" class="gold-btn">
-Explore
-</a>
+      </div>
 
-<a href="https://linkedin.com/in/rileyprue" target="_blank" class="outline-btn">
-LinkedIn
-</a>
+    </div>
 
-</div>
+    <div class="hero-image">
+      <img src="assets/rileyriley.png" alt="Riley Prue portrait" />
+    </div>
 
-</div>
+  </section>
 
-<div class="hero-image">
+  <section id="about" class="card hidden">
 
-<img src="assets/rileyriley.png">
+    <h2>About Me</h2>
 
-</div>
+    <p>
+      I’m Riley, an 18-year-old Junior Fire Alarm Technician from Ontario with a
+      passion for technology, skilled trades, and creative projects. I’m
+      currently building my experience in the fire protection industry while
+      working toward becoming a licensed electrician in the future.
+    </p>
 
-</section>
+  </section>
 
-<section id="about" class="card">
+  <section id="gallery" class="hidden">
 
-<h2>About Me</h2>
+    <h2>Gallery</h2>
 
-<p>
-  I’m Riley, an 18-year-old Junior Fire Alarm Technician from Ontario with a passion for technology,
-  skilled trades, and creative projects. I’m currently building my experience in the fire protection
-  industry while working toward becoming a licensed electrician in the future.
-</p>
+    <div class="gallery">
+      <img src="assets/photo1.jpg" alt="Gallery photo 1" />
+      <img src="assets/photo2.jpg" alt="Gallery photo 2" />
+      <img src="assets/photo3.jpg" alt="Gallery photo 3" />
+      <img src="assets/photo4.jpg" alt="Gallery photo 4" />
+    </div>
 
-</section>
+  </section>
 
-<section id="gallery">
+  <section id="interests" class="hidden">
 
-<h2>Gallery</h2>
+    <h2>Interests</h2>
 
-<div class="gallery">
+    <div class="grid">
 
-<img src="assets/photo1.jpg">
-<img src="assets/photo2.jpg">
-<img src="assets/photo3.jpg">
-<img src="assets/photo4.jpg">
-
-</div>
-
-</section>
-
-<section id="interests">
-
-<h2>Interests</h2>
-
-<div class="grid">
-
-  <div class="item">
-    💻
-    <h3>Technology</h3>
-    <p>Exploring new gadgets, smart home tech, networking, and creative tech projects.</p>
-  </div>
-
-  <div class="item">
-    🎬
-    <h3>Photo & Video Creation</h3>
-    <p>Creating cinematic photos and videos that combine creativity with technology.</p>
-  </div>
-
-  <div class="item">
-    🧸
-    <h3>Collectables</h3>
-    <p>Collecting Funko Pops and other unique items that reflect my interests and personality.</p>
-  </div>
-
-  <div class="item">
-    🌲
-    <h3>Outdoor Adventures</h3>
-    <p>Enjoying driving, exploring new places, cottage life, moutain biking, and skiing.</p>
-  </div>
-
-</div>
-
-<!-- Experience Section -->
-<section id="experience">
-
-  <h2>Experience</h2>
-
-  <div class="experience-list">
-
-    <!-- Oakridge -->
-    <div class="experience-card">
-      <div class="experience-content">
-        <span class="job-type">Current Position</span>
-        <h3>Junior Fire Alarm Technician</h3>
-        <h4>Oakridge Building Solutions Inc.</h4>
+      <div class="item">
+        💻
+        <h3>Technology</h3>
         <p>
-          Working in the fire protection industry assisting with fire alarm inspections,
-          troubleshooting, device replacement, system testing, and maintenance in residential
-          and commercial buildings across the GTA.
+          Exploring new gadgets, smart home tech, networking, and creative tech
+          projects.
         </p>
       </div>
 
-      <div class="experience-logo">
-        <img src="assets/oakridge-logo.png" alt="Oakridge Building Solutions Inc. logo">
-      </div>
-    </div>
-
-    <!-- Home Hardware -->
-    <div class="experience-card">
-      <div class="experience-content">
-        <span class="job-type">Part-Time Position</span>
-        <h3>Customer Service Associate</h3>
-        <h4>Clarington Home Hardware Building Centre</h4>
+      <div class="item">
+        🎬
+        <h3>Photo & Video Creation</h3>
         <p>
-          Providing customer service, handling cashier operations, assisting with building
-          materials, yard operations, inventory organization, and supporting contractors and
-          homeowners with product selection and orders.
+          Creating cinematic photos and videos that combine creativity with
+          technology.
         </p>
       </div>
 
-      <div class="experience-logo">
-        <img src="assets/homehardware-logo.png" alt="Home Hardware logo">
-      </div>
-    </div>
-
-    <!-- Splash and Wax -->
-    <div class="experience-card">
-      <div class="experience-content">
-        <span class="job-type">Personal Business</span>
-        <h3>Founder & Mobile Detailer</h3>
-        <h4>Splash and Wax Mobile Detailing</h4>
+      <div class="item">
+        🧸
+        <h3>Collectables</h3>
         <p>
-          Operating a mobile vehicle detailing service focused on interior and exterior cleaning,
-          paint-safe washing techniques, customer scheduling, equipment maintenance, and
-          delivering professional results directly at clients’ homes and workplaces.
+          Collecting Funko Pops and other unique items that reflect my interests
+          and personality.
         </p>
       </div>
 
-      <div class="experience-logo">
-        <img src="assets/splashandwax-logo.png" alt="Splash and Wax Mobile Detailing logo">
+      <div class="item">
+        🌲
+        <h3>Outdoor Adventures</h3>
+        <p>
+          Enjoying driving, exploring new places, cottage life, mountain biking,
+          and skiing.
+        </p>
       </div>
+
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <section id="experience" class="hidden">
 
-<section id="goals">
+    <h2>Experience</h2>
 
-<h2>Goals</h2>
+    <div class="experience-list">
 
-<div class="grid">
+      <div class="experience-card">
 
-<div class="item">
+        <div class="experience-content">
 
-🚀
+          <span class="job-type">Current Position</span>
 
-<h3>Career</h3>
+          <h3>Junior Fire Alarm Technician</h3>
 
-<p>
-Become an outstanding software engineer.
-</p>
+          <h4>Oakridge Building Solutions Inc.</h4>
 
-</div>
+          <p>
+            Working in the fire protection industry assisting with fire alarm
+            inspections, troubleshooting, device replacement, system testing,
+            and maintenance in residential and commercial buildings across the
+            GTA.
+          </p>
 
-<div class="item">
+        </div>
 
-🌎
+        <div class="experience-logo">
+          <img
+            src="assets/oakridge-logo.png"
+            alt="Oakridge Building Solutions Inc. logo"
+          />
+        </div>
 
-<h3>Impact</h3>
+      </div>
 
-<p>
-Build technology that helps people.
-</p>
+      <div class="experience-card">
 
-</div>
+        <div class="experience-content">
 
-<div class="item">
+          <span class="job-type">Part-Time Position</span>
 
-📚
+          <h3>Customer Service Associate</h3>
 
-<h3>Learning</h3>
+          <h4>Clarington Home Hardware Building Centre</h4>
 
-<p>
-Continue growing every year.
-</p>
+          <p>
+            Providing customer service, handling cashier operations, assisting
+            with building materials, yard operations, inventory organization,
+            and supporting contractors and homeowners with product selection
+            and orders.
+          </p>
 
-</div>
+        </div>
 
-</div>
+        <div class="experience-logo">
+          <img
+            src="assets/homehardware-logo.png"
+            alt="Home Hardware logo"
+          />
+        </div>
 
-</section>
+      </div>
 
-<section id="contact" class="contact">
+      <div class="experience-card">
 
-<h2>Let's Connect</h2>
+        <div class="experience-content">
 
-<p>
-Feel free to reach out through LinkedIn.
-</p>
+          <span class="job-type">Personal Business</span>
 
-<a href="https://linkedin.com/in/rileyprue" target="_blank" class="gold-btn">
+          <h3>Founder & Mobile Detailer</h3>
 
-Connect on LinkedIn
+          <h4>Splash and Wax Mobile Detailing</h4>
 
-</a>
+          <p>
+            Operating a mobile vehicle detailing service focused on interior and
+            exterior cleaning, paint-safe washing techniques, customer
+            scheduling, equipment maintenance, and delivering professional
+            results directly at clients’ homes and workplaces.
+          </p>
 
-</section>
+        </div>
 
-<footer>
+        <div class="experience-logo">
+          <img
+            src="assets/splashandwax-logo.png"
+            alt="Splash and Wax Mobile Detailing logo"
+          />
+        </div>
 
-© 2026 Your Name
+      </div>
 
-</footer>
+    </div>
 
-<script src="script.js"></script>
+  </section>
+
+  <section id="goals" class="hidden">
+
+    <h2>Goals</h2>
+
+    <div class="grid">
+
+      <div class="item">
+        🚒
+        <h3>Career</h3>
+        <p>
+          Continue building my career in the fire protection industry while
+          working toward becoming a licensed electrician.
+        </p>
+      </div>
+
+      <div class="item">
+        ⚡
+        <h3>Skilled Trades</h3>
+        <p>
+          Gain hands-on experience, complete my CFAA training, and develop
+          strong technical skills that will support my future apprenticeship.
+        </p>
+      </div>
+
+      <div class="item">
+        📚
+        <h3>Personal Growth</h3>
+        <p>
+          Keep learning new technologies, improve my fitness and discipline,
+          and become a better person both professionally and personally.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="contact hidden">
+
+    <h2>Let’s Connect</h2>
+
+    <p>
+      Feel free to reach out if you’d like to connect, collaborate, or discuss
+      opportunities in skilled trades, fire protection, technology, or creative
+      projects.
+    </p>
+
+    <div class="contact-buttons">
+
+      <a
+        href="https://linkedin.com/in/rileyprue"
+        target="_blank"
+        class="gold-btn"
+      >
+        Connect on LinkedIn
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Riley Prue
+  </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
+```
+
+The important fixes are:
+
+* Changed `hero-text` → `hero-content` to match your CSS.
+* Added `hidden` classes so your scroll animations work consistently.
+* Improved the **Goals** content so it matches your trades and electrician path.
+* Added a **contact-buttons** wrapper so the LinkedIn button has proper spacing.
+* Added better alt text and cleaned up the structure so the bottom of the site flows smoothly.
