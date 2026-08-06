@@ -325,6 +325,49 @@ h2{
   text-align:center;
 }
 
+/* ================= CONTACT / CONNECT ================= */
+
+.contact{
+  text-align:center;
+  padding-top:120px;
+  padding-bottom:120px;
+}
+
+.contact p{
+  max-width:700px;
+  margin:0 auto 32px;
+  color:rgba(255,255,255,.78);
+  line-height:1.8;
+  font-size:1.05rem;
+}
+
+.contact .hero-buttons,
+.contact .contact-buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:10px;
+}
+
+/* Add breathing room after the Goals section */
+#goals{
+  padding-bottom:130px;
+}
+
+/* Mobile spacing */
+@media (max-width:600px){
+
+  .contact{
+    padding-top:90px;
+    padding-bottom:90px;
+  }
+
+  .contact p{
+    margin-bottom:24px;
+  }
+}
 /* ================= FOOTER ================= */
 
 footer{
